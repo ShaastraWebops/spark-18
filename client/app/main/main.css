@@ -95,7 +95,7 @@ background: linear-gradient(150deg, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Fir
 
 .lists ul{
   margin-top: 25px;
-  max-width: 400px;
+  max-width: 400px
 }
 
 .struct li{
@@ -276,4 +276,17 @@ input[type=checkbox]:checked ~ #hide {
 
 input[type=checkbox]:checked ~ label{
   display: none;
+}
+
+th, td{
+  font-family: 'Montserrat';
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+tr:nth-child(3n+0){
+  background-color: #ededed;
 }
