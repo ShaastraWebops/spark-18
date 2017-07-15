@@ -9,23 +9,13 @@ export class RegistrationComponent {
 
   members = [];
 
-  constructor($http) {
+  constructor($http,$scope) {
         'ngInject';
 
     this.$http = $http;
-    this.newparticipant = {
-        name: '',
-        insti: '',
-        stream: '',
-        mobile_no: '',
-        alt_mobno: '',
-        email: '',
-        q1_ans: '',
-        q2_ans: '',
-        team_name: '',
-        member_names: [],
-        member_emails: []
-    };
+    $scope.cities = [
+    'Delhi','Ahmedabad','Bangalore','Mysore','Thrissur','Calicut','Trivandrum','Kochi','Mumbai','Pune','Nagpur','Hyderabad','Vijayawada','Vizag','Trichy','Chennai','Madurai','Coimbatore','Salem','Kolkata'
+      ];
     this.submitted = false;
   }
 
