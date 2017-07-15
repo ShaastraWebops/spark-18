@@ -12,7 +12,7 @@ export class ManageCityComponent {
   }
 }
 
-export default angular.module('spark18App.ManageCity', [uiRouter])
+export default angular.module('summitregistations2018App.ManageCity', [uiRouter])
   .config(routes)
   .component('ManageCity', {
     template: require('./ManageCity.html'),
