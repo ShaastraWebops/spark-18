@@ -44,20 +44,24 @@
           </i> Phone Number *
         </label>
         <input type="text" name="phonenumber" placeholder="Your Mobile No" ng-required="true" ng-pattern="/^[0-9]{10}$/" ng-model="ctrl.newparticipant.phonenumber" class="form-control"/>
+        <div ng-class="{'glyphicon glyphicon-ok form-control-feedback':theform.phonenumber.$valid, 'glyphicon glyphicon-remove-sign form-control-feedback': !theform.phonenumber.$valid && (!theform.phonenumber.$pristine || theform.phonenumber.$touched)}">
+      </div>
         <p class="help-block" ng-show="theform.phonenumber.$error.required && theform.phonenumber.$touched">
           This field is required
+        </p>
+        <p class="help-block" ng-show="theform.phonenumber.$invalid && theform.phonenumber.$dirty">
+            Please Enter a valid Phonenumber
         </p>
       </div>
 
       <div class="input-group has-feedback" ng-class="{'has-error':!theform.email.$valid && (theform.email.$dirty || theform.email.$touched),'has-success':theform.email.$valid}" >
          <label class="control-label">Email ID  * </label>
          <input type="email" name="email" ng-required="true" ng-pattern="/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" class="form-control" placeholder="Enter your Email-id" ng-model="ctrl.newparticipant.email"/>
+         <div ng-class="{'glyphicon glyphicon-ok form-control-feedback':theform.email.$valid, 'glyphicon glyphicon-remove-sign form-control-feedback': !theform.email.$valid && (!theform.email.$pristine || theform.email.$touched)}">
+         </div>
          <p class="help-block" ng-show="theform.email.$error.required && theform.email.$touched">
            This field is required
          </p>
-         <div ng-class="{'glyphicon glyphicon-ok form-control-feedback':theform.email.$valid, 'glyphicon glyphicon-remove-sign form-control-feedback': !theform.email.$valid && (!theform.email.$pristine || theform.email.$touched)}">
-         </div>
-
          <p class="help-block" ng-show="theform.email.$invalid && theform.email.$dirty">
              Please Enter a valid Email ID
          </p>
@@ -69,13 +73,7 @@
       <select ng-model="ctrl.newparticipant.city" ng-options="city for city in cities"></select>
       <p class="help-block" ng-show="theform.email.$error.required && theform.email.$touched">
               This field is required
-            </p>
-            <div ng-class="{'glyphicon glyphicon-ok form-control-feedback':theform.email.$valid, 'glyphicon glyphicon-remove-sign form-control-feedback': !theform.email.$valid && (!theform.email.$pristine || theform.email.$touched)}">
-            </div>
-
-            <p class="help-block" ng-show="theform.email.$invalid && theform.email.$dirty">
-                Please Enter a valid Email ID
-            </p>
+</p>
             </div>
 
 
