@@ -1,5 +1,5 @@
 <div class="container">
-<div class="header" ng-init="manage=' '">
+<div class="header" ng-init="manage='add'">
 	<button class="btn btn-primary" ng-show="manage=='add'" ng-click="manage='add' && cityCtrl.addCity()">Add City</button>
 	<button class="btn btn-primary" ng-show="manage=='edit'" ng-click="manage='edit' && cityCtrl.editCity()">Edit City</button>
 	<button class="btn btn-primary" ng-show="manage=='close'" ng-click="manage='close' && cityCtrl.closeregistration()">Close Registration</button>
@@ -33,7 +33,6 @@
       <th>CityName</th>
       <th>Venue</th>
       <th style="width:60px">Time</th>
-      <th></th>
       <th>Venue's Link</th>
       <th>Capacity</th>
       <th>no_of_registered</th>
@@ -42,15 +41,32 @@
        <tbody>
         <tr ng-repeat="city in cityCtrl.cities track by $index" >
           <td>{{$index+1}}</td>
-          <td>{{city.Cityname}}</td>
-          <td>{{city.Venue}}</td>
-          <td>{{city.Time}}</td>
-          <td><a href="">{{city.Venue_Link}}</a></td>
-          <td>{{city.Capacity}}</td>
-          <td>{{city.no_of_registered}}</td>
-          <td>{{city.Active}}</td>
-			<td ><button class="btn btn-success" ng-click="cityCtrl.edit(city)">Edit</button></td>
-          <td><button class="btn btn-primary" ng-click="cityCtrl.save(city)">Save</button></td>
+          
+          <td ng-hide="city.edit">{{city.CityName}}</td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.CityName"></td>
+
+          <td ng-hide="city.edit">{{city.Venue}}</td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.Venue"></td>
+
+          <td ng-hide="city.edit">{{city.Time}}</td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.Time"></td>
+
+          <td ng-hide="city.edit"><a href="">{{city.Venue_link}}</a></td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.Venue_link"></td>
+
+          <td ng-hide="city.edit">{{city.Capacity}}</td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.Capacity"></td>
+
+          <td ng-hide="city.edit">{{city.no_of_registered}}</td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.no_of_registered"></td>
+
+          <td ng-hide="city.edit">{{city.active}}</td>
+          <td ng-show="city.edit"><input type="text" ng-model="city.active"></td>
+
+		<td ng-hide="city.edit" ><button class="btn btn-success" ng-click="cityCtrl.toggle(city)">Edit</button></td>
+          
+          <td ng-hide="city.edit"><button class="btn btn-primary" ng-click="cityCtrl.save(city)">Save</button></td>
+          <td ng-show="city.edit"><button class="btn btn-primary" ng-click="cityCtrl.toggle(city)">Cancel</button></td>
 
        </tr>
       </tbody>

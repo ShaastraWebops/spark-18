@@ -25,12 +25,22 @@ export class ManageCityComponent {
         no_of_registered: ' ',
         active:true
   }
+}
 
-  $onInit() {
+$onInit() {
+    this.manage = 'add';
     this.$http.get('/api/citys').then(res => {
       this.cities = res.data;
       console.log(this.data);
     })
+  }
+
+  reset() {
+    this.$http.get('/api/citys')
+      .then(response => {
+        this.cities = response.data;
+        this.socket.syncUpdates('cities', this.cities);
+      });
   }
 
   addCity(){
@@ -43,8 +53,25 @@ export class ManageCityComponent {
       no_of_registered: this.newCity.no_of_registered,
       active: this.newCity.active
     }).then(data => {
+      this.city = {};
       console.log(data);
     });
+  }
+
+toggle(city) {
+        city.edit = !city.edit;
+   };   
+
+  saveCity(city){
+    this.$http.put(`/api/citys/${city._id}`,{
+      CityName: this.newCity.CityName,
+      Venue: this.newCity.Venue,
+      Time: this.newCity.Time,
+      Venue_link: this.newCity.Venue_link,
+      Capacity: this.newCity.Capacity,
+      no_of_registered: this.newCity.no_of_registered,
+      active: this.newCity.active
+    })
   }
 
 }
