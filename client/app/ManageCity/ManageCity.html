@@ -1,34 +1,37 @@
-<div class="container">
+<div class="col-md-12" >
 
 <div class="header" ng-init="cityCtrl.manage=1">
-	<button class="btn btn-primary" ng-show="cityCtrl.manage==1" ng-click="cityCtrl.manage=1 && cityCtrl.addCity()">Add City</button>
-	<button class="btn btn-primary" ng-show="cityCtrl.manage==2" ng-click="cityCtrl.manage=2 && cityCtrl.editCity()">Edit City</button>
-	<button class="btn btn-primary" ng-show="cityCtrl.manage==3" ng-click="cityCtrl.manage=3 && cityCtrl.closeregistration()">Close Registration</button>
+	<button class="btn btn-success" ng-show="cityCtrl.manage==1" ng-click="cityCtrl.manage=1">Add City</button>
+	<button class="btn btn-primary" ng-show="cityCtrl.manage==2" ng-click="cityCtrl.manage=2">Edit City</button>
+	<button class="btn btn-danger" ng-show="cityCtrl.manage==3" ng-click="cityCtrl.manage=3" >Close Registration</button>
 	</div>
-	
-<div class="cityadd" ng-show="cityCtrl.manage==1">
+
+<div class="col-md-12" ng-show="cityCtrl.manage==1">
+	<h2>Add a City</h2>
 	<label>City Name</label>
-	<input type="text" placeholder="Enter city name"/>
+	<input type="text" placeholder="Enter city name" ng-model="cityCtrl.newCity.CityName"/>
 	<br>
 	<label>Venue: </label>
-	<input type="text" placeholder="Enter venue"/>
+	<input type="text" placeholder="Enter venue" ng-model="cityCtrl.newCity.Venue"/>
 	<br>
 	<label>Time: </label> 
-	<input type="text" placeholder="Enter time"/>
+	<input type="text" placeholder="Enter time" ng-model="cityCtrl.newCity.Time"/>
 	<label>Venue_link:(google Map link) </label> 
-	<input type="text" placeholder="Enter venue Link"/>
+	<input type="text" placeholder="Enter venue Link" ng-model="cityCtrl.newCity.Venue_link"/>
 	<br>
-	<label>capacity</label>
-	<input type="text" placeholder="Enter capacity"/>
+	<label>Capacity</label>
+	<input type="text" placeholder="Enter capacity" ng-model="cityCtrl.newCity.Capacity"/>
 	<br>
 	<label>no_of_registered</label>
-	<input type="text" placeholder="Enter capacity"/>
+	<input type="text" placeholder="Enter capacity" ng-model="cityCtrl.newCity.no_of_registered"/>
 	<label>Active</label>
-	<input type="boolean" placeholder="Enter true or false"/>
+	<input type="boolean" placeholder="Enter true or false" ng-model="cityCtrl.newCity.active"/><br>
+	<button class="btn btn-success" ng-click="cityCtrl.addCity()">Add the City</button>
 </div>
 
+
 <div class="col-md-12" ng-show="cityCtrl.manage==2" >
-  <h2 >List of Cities</h2>
+  <h2 >List of Cities to Edit</h2>
   <table class="table table-striped" >
     <thead>
       <th>#</th>
@@ -41,7 +44,7 @@
       <th>Active</th>
     </thead>
        <tbody>
-        <tr ng-repeat="city in cityCtrl.cities track by $index" >
+        <tr style="color:{{city.active=='false'?'red':'black'}}" ng-repeat="city in cityCtrl.cities track by $index" >
           <td>{{$index+1}}</td>
           
           <td ng-hide="city.edit">{{city.CityName}}</td>
@@ -65,12 +68,46 @@
           <td ng-hide="city.edit">{{city.active}}</td>
           <td ng-show="city.edit"><input type="text" ng-model="city.active"></td>
 
-		<td ng-hide="city.edit" ><button class="btn btn-success" ng-click="cityCtrl.toggle(city)">Edit</button></td>
+			<td ng-hide="city.edit" ><button class="btn btn-primary" ng-click="cityCtrl.toggle(city)">Edit</button></td>
           
-          <td ng-hide="city.edit"><button class="btn btn-primary" ng-click="cityCtrl.save(city)">Save</button></td>
-          <td ng-show="city.edit"><button class="btn btn-primary" ng-click="cityCtrl.toggle(city)">Cancel</button></td>
+          <td ng-show="city.edit">
+        	<button class="btn btn-success" ng-click="cityCtrl.save(city)">Save</button>
+			<button class="btn btn-danger" ng-click="cityCtrl.toggle(city)">Cancel</button>
+		</td>
 
-       </tr>
+      </tr>
+      </tbody>
+    </table>
+</div>
+
+
+<div class="col-md-12" ng-show="cityCtrl.manage==3" >
+  <h2 >Close Registrations</h2>
+  <table class="table table-striped" >
+    <thead>
+      <th>#</th>
+      <th>CityName</th>
+      <th>Venue</th>
+      <th style="width:60px">Time</th>
+      <th>Venue's Link</th>
+      <th>Capacity</th>
+      <th>no_of_registered</th>
+      <th>Active</th>
+    </thead>
+       <tbody>
+        <tr style="color:{{city.active=='false'?'red':'black'}}" ng-repeat="city in cityCtrl.cities track by $index" >
+        <td>{{$index+1}}</td>
+        <td >{{city.CityName}}</td>
+		<td >{{city.Venue}}</td>
+		<td >{{city.Time}}</td>
+        <td ><a href="">{{city.Venue_link}}</a></td>
+        <td >{{city.Capacity}}</td>
+        <td >{{city.no_of_registered}}</td>
+        <td >{{city.active}}</td>
+
+		<td ><button class="btn btn-primary" ng-click="cityCtrl.close_Registration(city)">Close Registration</button></td>
+          
+        </tr>
       </tbody>
     </table>
 </div>

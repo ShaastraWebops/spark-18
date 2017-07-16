@@ -11,6 +11,7 @@ export class ManageCityComponent {
   socket;
   cities = [];
   newCity = '';
+
   /*@ngInject*/
   constructor($http, Auth, $scope) {
     this.$http = $http;
@@ -27,10 +28,9 @@ export class ManageCityComponent {
         active:true
     }
   }
-}
+
 
 $onInit() {
-    this.manage = 'add';
     this.$http.get('/api/citys').then(res => {
       this.cities = res.data;
       console.log(this.data);
@@ -41,11 +41,12 @@ $onInit() {
     this.$http.get('/api/citys')
       .then(response => {
         this.cities = response.data;
-        this.socket.syncUpdates('cities', this.cities);
+        this.socket.syncUpdates('ManageCity', this.cities);
       });
   }
 
   addCity(){
+    if(this.newCity){
     this.$http.post('/api/citys',{
       CityName: this.newCity.CityName,
       Venue: this.newCity.Venue,
@@ -55,24 +56,31 @@ $onInit() {
       no_of_registered: this.newCity.no_of_registered,
       active: this.newCity.active
     }).then(data => {
-      this.city = {};
+      this.newCity = {};
       console.log(data);
     });
   }
+  }
 
-toggle(city) {
+  toggle(city) {
         city.edit = !city.edit;
    };   
 
   saveCity(city){
     this.$http.put(`/api/citys/${city._id}`,{
-      CityName: this.newCity.CityName,
-      Venue: this.newCity.Venue,
-      Time: this.newCity.Time,
-      Venue_link: this.newCity.Venue_link,
-      Capacity: this.newCity.Capacity,
-      no_of_registered: this.newCity.no_of_registered,
-      active: this.newCity.active
+      CityName: this.city.CityName,
+      Venue: this.city.Venue,
+      Time: this.city.Time,
+      Venue_link: this.city.Venue_link,
+      Capacity: this.city.Capacity,
+      no_of_registered: this.city.no_of_registered,
+      active: this.city.active
+    })
+  }
+
+  close_Registration(city){
+    this.$http.put(`/api/citys/${city._id}`,{
+      active: false
     })
   }
 

@@ -2,7 +2,7 @@
 
 describe('Component: ManageCityComponent', function() {
   // load the controller's module
-  beforeEach(module('spark18App.ManageCity'));
+  beforeEach(module('summitregistations2018App.ManageCity'));
 
   var ManageCityComponent;
 
