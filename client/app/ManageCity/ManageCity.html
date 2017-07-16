@@ -1,6 +1,60 @@
-<div>This is the ManageCity view.</div>
-<div class="header">
-	<button class="btn btn-primary">Add City</button>
-	<button class="btn btn-primary">Edit City</button>
-	<button class="btn btn-primary">Close Registration</button>
+<div class="container">
+<div class="header" ng-init="manage=' '">
+	<button class="btn btn-primary" ng-show="manage=='add'" ng-click="manage='add' && cityCtrl.addCity()">Add City</button>
+	<button class="btn btn-primary" ng-show="manage=='edit'" ng-click="manage='edit' && cityCtrl.editCity()">Edit City</button>
+	<button class="btn btn-primary" ng-show="manage=='close'" ng-click="manage='close' && cityCtrl.closeregistration()">Close Registration</button>
 	</div>
+<div class="cityadd" ng-show="manage=='add'">
+	<label>City Name</label>
+	<input type="text" placeholder="Enter city name"/>
+	<br>
+	<label>Venue: </label>
+	<input type="text" placeholder="Enter venue"/>
+	<br>
+	<label>Time: </label> 
+	<input type="text" placeholder="Enter time"/>
+	<label>Venue_link:(google Map link) </label> 
+	<input type="text" placeholder="Enter venue Link"/>
+	<br>
+	<label>capacity</label>
+	<input type="text" placeholder="Enter capacity"/>
+	<br>
+	<label>no_of_registered</label>
+	<input type="text" placeholder="Enter no of students registered"/>
+	<label>Active</label>
+	<input type="boolean" placeholder="Enter true or false"/>
+</div>
+
+<div class="col-md-12" ng-show="manage=='edit'" >
+  <h2 >List of Cities</h2>
+  <table class="table table-striped" >
+    <thead>
+      <th>#</th>
+      <th>CityName</th>
+      <th>Venue</th>
+      <th style="width:60px">Time</th>
+      <th></th>
+      <th>Venue's Link</th>
+      <th>Capacity</th>
+      <th>no_of_registered</th>
+      <th>Active</th>
+    </thead>
+       <tbody>
+        <tr ng-repeat="city in cityCtrl.cities track by $index" >
+          <td>{{$index+1}}</td>
+          <td>{{city.Cityname}}</td>
+          <td>{{city.Venue}}</td>
+          <td>{{city.Time}}</td>
+          <td><a href="">{{city.Venue_Link}}</a></td>
+          <td>{{city.Capacity}}</td>
+          <td>{{city.no_of_registered}}</td>
+          <td>{{city.Active}}</td>
+			<td ><button class="btn btn-success" ng-click="cityCtrl.edit(city)">Edit</button></td>
+          <td><button class="btn btn-primary" ng-click="cityCtrl.save(city)">Save</button></td>
+
+       </tr>
+      </tbody>
+    </table>
+</div>
+
+

@@ -8,8 +8,8 @@ var CitySchema = new mongoose.Schema({
 	Venue: {type: String, required:true},
 	Time: {type: Date, required:true},
 	Venue_link: {type: String, required:true},
-	Capacity: {type: Number, required:false},
-	no_of_registered: {type: Number, required:true},
+	Capacity: {type: String, required:false},
+	no_of_registered: {type: String, required:true},
 	active: {type: Boolean, required:true, default:true} 
 });
 
