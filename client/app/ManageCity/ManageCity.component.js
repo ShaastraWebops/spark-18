@@ -15,6 +15,7 @@ export class ManageCityComponent {
   constructor($http, Auth, $scope) {
     this.$http = $http;
     this.$scope = $scope;
+    this.manage = 1;
     this.isAdmin = Auth.isAdminSync;
     this.newCity = {
         CityName: '',
@@ -24,6 +25,7 @@ export class ManageCityComponent {
         Capacity: ' ',
         no_of_registered: ' ',
         active:true
+    }
   }
 }
 
