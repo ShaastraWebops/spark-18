@@ -17,24 +17,24 @@
         </p>
       </div>
 
-      <div class="input-group" ng-class="{'has-error':!theform.insti.$valid && !theform.insti.$untouched,'has-success':theform.insti.$valid}" >
+      <div class="input-group" ng-class="{'has-error':!theform.rollno.$valid && !theform.rollno.$untouched,'has-success':theform.rollno.$valid}" >
 
         <label class="control-label">
           <i class="glyphicon glyphicon-education" style="float:left">
 
-          </i> School Name *
+          </i> Roll No *
         </label>
-        <input type="text" name="insti" ng-required="true" placeholder="Institution you are studying in" ng-model="ctrl.newparticipant.insti" class="form-control"/>
-        <p class="help-block" ng-show="theform.insti.$error.required && theform.insti.$touched">
+        <input type="text" name="rollno" ng-required="true" placeholder="Enter your roll no" ng-model="ctrl.newparticipant.rollno" class="form-control"/>
+        <p class="help-block" ng-show="theform.rollno.$error.required && theform.rollno.$touched">
           This field is required
         </p>
       </div>
 
-      <div class="input-group" ng-class="{'has-error':!theform.stream.$valid && !theform.stream.$untouched,'has-success':theform.stream.$valid}"  >
-        <label class="control-label">Roll Number *
+      <div class="input-group" ng-class="{'has-error':!theform.school.$valid && !theform.school.$untouched,'has-success':theform.school.$valid}"  >
+        <label class="control-label">School *
         </label>
-        <input type="text" class="form-control" name="stream" ng-required="true" placeholder="Stream" ng-model="ctrl.newparticipant.stream" />
-        <p class="help-block" ng-show="theform.stream.$error.required && theform.stream.$touched">
+        <input type="text" class="form-control" name="school" ng-required="true" placeholder="Stream" ng-model="ctrl.newparticipant.school" />
+        <p class="help-block" ng-show="theform.school.$error.required && theform.school.$touched">
         This field is required
         </p>
       </div>
@@ -68,9 +68,8 @@
       </div>
 
       <button name="Submit"  class="submit action-button" value="submit" ng-disabled="theform.Name.$error.required || theform.team_name.$error.required || theform.insti.$error.required || theform.stream.$error.required || theform.file.$error.required || theform.work_upon.$error.required || theform.email.$error.required || theform.$error.pattern || (theform.mem2_email.$error.required && !theform.mem2_name.$error.required) || (theform.mem3_email.$error.required && !theform.mem3_name.$error.required) || (theform.mem4_email.$error.required && !theform.mem4_name.$error.required) || (theform.mem5_email.$error.required && !theform.mem5_name.$error.required)"  ng-click ="ctrl.submitform()"  >Submit</button>
-
       <div style="color:rgb(217,83,79);font-size:13px" >
-        The fields marked with ** are required
+        The fields marked with * are required
       </div>
     </fieldset>
 

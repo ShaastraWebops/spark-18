@@ -9,7 +9,7 @@ export class RegistrationComponent {
 
   members = [];
 
-  constructor($http) {
+  constructor($http,$scope) {
         'ngInject';
 
     this.$http = $http;
@@ -26,6 +26,7 @@ export class RegistrationComponent {
       member_names: [],
       member_emails: []
     };
+
     this.submitted = false;
     this.curCity = '';
     this.$http.get('/api/citys').then(res => {
