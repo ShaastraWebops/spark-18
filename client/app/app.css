@@ -45,9 +45,9 @@
 /* Component styles are injected through gulp */
 /* inject:css */
 @import 'admin/admin.css';
+@import 'editcity/editcity.css';
 @import 'entries/entries.css';
 @import 'main/main.css';
-@import 'editcity/editcity.css';
 @import 'registration/registration.css';
 @import '../components/footer/footer.css';
 @import '../components/modal/modal.css';
