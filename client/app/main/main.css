@@ -261,11 +261,7 @@ input[type=checkbox] {
    left: -9999px;
 }
 
-label {  
-  display: inline-block;
-  margin: 60px 0 10px 0;
-  cursor: pointer;
-}
+
 
 /* Default State */
 

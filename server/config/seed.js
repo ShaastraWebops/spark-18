@@ -4,10 +4,10 @@
  */
 
 'use strict';
-import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
 import participant from '../api/participant/participant.model';
 import config from './environment/';
+import city from '../api/city/city.model';
 
 export default function seedDatabaseIfNeeded() {
   if(config.seedDB) {

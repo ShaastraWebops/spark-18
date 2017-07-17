@@ -13,10 +13,25 @@ export class RegistrationComponent {
         'ngInject';
 
     this.$http = $http;
-    $scope.cities = [
-    'Delhi','Ahmedabad','Bangalore','Mysore','Thrissur','Calicut','Trivandrum','Kochi','Mumbai','Pune','Nagpur','Hyderabad','Vijayawada','Vizag','Trichy','Chennai','Madurai','Coimbatore','Salem','Kolkata'
-      ];
+    this.newparticipant = {
+      name: '',
+      insti: '',
+      stream: '',
+      mobile_no: '',
+      alt_mobno: '',
+      email: '',
+      q1_ans: '',
+      q2_ans: '',
+      team_name: '',
+      member_names: [],
+      member_emails: []
+    };
+
     this.submitted = false;
+    this.curCity = '';
+    this.$http.get('/api/citys').then(res => {
+      this.cities = res.data;
+    })
   }
 
   $onInit() {
