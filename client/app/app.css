@@ -47,7 +47,7 @@
 @import 'admin/admin.css';
 @import 'entries/entries.css';
 @import 'main/main.css';
-@import 'ManageCity/ManageCity.css';
+@import 'editcity/editcity.css';
 @import 'registration/registration.css';
 @import '../components/footer/footer.css';
 @import '../components/modal/modal.css';

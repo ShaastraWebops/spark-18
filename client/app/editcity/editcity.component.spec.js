@@ -1,14 +1,14 @@
 'use strict';
 
-describe('Component: ManageCityComponent', function() {
+describe('Component: EditcityComponent', function() {
   // load the controller's module
-  beforeEach(module('summitregistations2018App.ManageCity'));
+  beforeEach(module('summitregistations2018App.editcity'));
 
-  var ManageCityComponent;
+  var EditcityComponent;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function($componentController) {
-    ManageCityComponent = $componentController('ManageCity', {});
+    EditcityComponent = $componentController('editcity', {});
   }));
 
   it('should ...', function() {

@@ -3,20 +3,18 @@ const angular = require('angular');
 
 const uiRouter = require('angular-ui-router');
 
-import routes from './ManageCity.routes';
+import routes from './editcity.routes';
 
-export class ManageCityComponent {
+export class EditcityComponent {
+  /*@ngInject*/
 
-  $http;
-  socket;
   cities = [];
   newCity = '';
 
-  /*@ngInject*/
-  constructor($http, Auth, $scope) {
+  constructor($http, Auth) {
     this.$http = $http;
-    this.$scope = $scope;
     this.manage = 1;
+    this.curCity = '';
     this.isAdmin = Auth.isAdminSync;
     this.newCity = {
         CityName: '',
@@ -29,20 +27,11 @@ export class ManageCityComponent {
     }
   }
 
-
-$onInit() {
+  $onInit() {
     this.$http.get('/api/citys').then(res => {
       this.cities = res.data;
-      console.log(this.data);
-    })
-  }
-
-  reset() {
-    this.$http.get('/api/citys')
-      .then(response => {
-        this.cities = response.data;
-        this.socket.syncUpdates('ManageCity', this.cities);
-      });
+      console.log(this.cities);
+    });
   }
 
   addCity(){
@@ -59,9 +48,12 @@ $onInit() {
       this.newCity = {};
       console.log(data);
     });
-  }
+    }
   }
 
+  getCurCity(){
+    console.log(this.curCity);
+  }
   toggle(city) {
         city.edit = !city.edit;
    };   
@@ -83,14 +75,13 @@ $onInit() {
       active: false
     })
   }
-
 }
 
-export default angular.module('summitregistations2018App.ManageCity', [uiRouter])
+export default angular.module('summitregistations2018App.editcity', [uiRouter])
   .config(routes)
-  .component('ManageCity', {
-    template: require('./ManageCity.html'),
-    controller: ManageCityComponent,
-    controllerAs: 'cityCtrl'
+  .component('editcity', {
+    template: require('./editcity.html'),
+    controller: EditcityComponent,
+    controllerAs: 'editCtrl'
   })
   .name;
