@@ -46,33 +46,22 @@ export class EditcityComponent {
       active: this.newCity.active
     }).then(data => {
       this.newCity = {};
-      console.log(data);
+      alert('Successfully added');
     });
     }
   }
 
-  getCurCity(){
-    console.log(this.curCity);
-  }
-  toggle(city) {
-        city.edit = !city.edit;
-   };   
-
-  saveCity(city){
-    this.$http.put(`/api/citys/${city._id}`,{
-      CityName: this.city.CityName,
-      Venue: this.city.Venue,
-      Time: this.city.Time,
-      Venue_link: this.city.Venue_link,
-      Capacity: this.city.Capacity,
-      no_of_registered: this.city.no_of_registered,
-      active: this.city.active
-    })
-  }
-
-  close_Registration(city){
-    this.$http.put(`/api/citys/${city._id}`,{
-      active: false
+  saveCity(){
+    this.$http.put(`/api/citys/`+this.curCity._id,{
+      CityName: this.curCity.CityName,
+      Venue: this.curCity.Venue,
+      Time: this.curCity.Time,
+      Venue_link: this.curCity.Venue_link,
+      Capacity: this.curCity.Capacity,
+      no_of_registered: this.curCity.no_of_registered,
+      active: this.curCity.active
+    }).then(res => {
+      alert('Updated Successfully!');
     })
   }
 }
