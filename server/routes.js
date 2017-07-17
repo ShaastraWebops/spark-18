@@ -11,7 +11,6 @@ export default function(app) {
   // Insert routes below
   app.use('/api/citys', require('./api/city'));
   app.use('/api/participants', require('./api/participant'));
-  app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
     app.use('/api/uploads', require('./api/upload'));
 
