@@ -3,15 +3,14 @@ import uiRouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export class MainController {
-  $http;
-  socket;
-  awesomeThings = [];
-  newThing = '';
+  
 
   /*@ngInject*/
   constructor($http, Auth) {
     this.$http = $http;
     this.isAdmin = Auth.isAdminSync;
+    this.awesomeThings = [];
+    this.newThing = '';
   }
 
   entries(){

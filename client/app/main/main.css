@@ -1,23 +1,24 @@
-/*body{
-  width: 100vw;
+body{
+  width: 100%;
   display: flex;
   flex-direction: row;
   font-family: 'Montserrat' , sans-serif;
   padding: 30px 10px;
   max-width:100%;
+  overflow-x: hidden;
 }
-*/
+
 .sidebar{
-  flex: 1.5;
+  width: 10vw;
+  max-width: 120px;
   position: fixed;
-  z-index: 1;
   border-right: 1px solid gainsboro;
   margin-top: 25px;
 }
 
 .content{
-  margin-left: 130px;
-  flex: 12;
+  margin-left: 12vw;
+  width: 85vw;
   display: flex;
   flex-direction: column;
   
@@ -31,8 +32,6 @@
 
 .spark{
   flex: 8;
-
-  
   /*border: 5px solid white;*/
   margin: 5px;
 }
@@ -78,13 +77,36 @@ background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, F
   margin-bottom: 20px;
 }
 
+.where h1{
+  display: inline-block;
+}
+
+/*#s1{
+  animation: one 0.2s ease 10.2s 1;
+}
+
+#s2{
+  animation: one 0.2s ease 10.4s 1;
+}
+
+#s3{
+  animation: one 0.2s ease 10.6s 1;
+}
+
+#s4{
+  animation: one 0.2s ease 10.8s 1;
+}
+
+#s5{
+  animation: one 0.2s ease 11s 1;
+}*/
+
 .struct{
   color: white;
   background: #FF8008;  /* fallback for old browsers */
-background: -webkit-linear-gradient(150deg, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(150deg, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(150deg, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(150deg, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow: hidden;
-  
   display: flex;
 }
 
@@ -114,7 +136,11 @@ background: linear-gradient(150deg, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Fir
 .m{
   border-radius: 5px;
   margin: 5px;
-  min-width: 400px;
+  /*min-width: 400px;*/
+}
+
+.shaastra.m{
+  margin: 5px 0px;
 }
 
 .c{
@@ -122,18 +148,13 @@ background: linear-gradient(150deg, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Fir
 }
 
 .spark img{
+  max-height: 350px;
   position: relative;
   top:-80px;
   float: right;
   opacity: 0.8;
   width: 50%;
   transition: all 200ms ease-in;
-}
-
-img:hover{
-  transform: scale(1.1);
-  transition: all 200ms ease-in;
-  
 }
 
 .struct img{
@@ -143,17 +164,21 @@ img:hover{
   transform: translateY(75px); 
 }
 
-@keyframes grow{
-  0%{transform: scale(0.9); opacity: 0.1;}
-  80%{transform: scale(1.1);}
-  100%{transform: scale(1); opacity: 0.9;}
-}
+/*animations*/
 
 @keyframes up{
   0%{transform: translateY(20px); opacity: 0.1;}
   100%{transform: translateY(0px); opacity: auto;}
 }
 
+@keyframes one{
+  0%{transform: scale(3); opacity: 0;}
+  100%{transform: scale(1); opacity: 1;}
+
+}
+
+
+/*text styles*/
 
 ul{
   padding: 0px 15px;
@@ -184,19 +209,20 @@ p{
   font-size: 48px;
 }
 
-h1{
+.content h1{
   margin: 5px 20px;
 }
 
-h2{
+.content h2{
   font-size: 24px;
   opacity: 0.7;
   margin-left: 20px;
 }
 
-h1, h2{
-  animation: up 0.5s ease-out 0s 1;
+.para h1, h2{
+  animation: up 0.8s ease-out 0s 1;
 }
+
 
 /*h3{
   margin-left: 20px;
@@ -208,7 +234,7 @@ h1, h2{
   letter-spacing: 5px;
 }*/
 
-h3{
+.content h3{
   margin-left: 20px;
   font-size: 18px;
 }
@@ -221,14 +247,7 @@ a{
 
 a:hover{
   text-decoration: underline;
-  
   transition: all 0.3s ease;
-
-
-}
-
-a.active{
-  border-bottom: 2px solid red;
 }
 
 #hide{
@@ -239,9 +258,12 @@ a.active{
   float: right;
   margin-right: 30px;
   padding: 5px;
+  color: white;
 }
 
-@media only screen and (max-width: 900px){
+/*mobile view*/
+
+@media only screen and (max-width: 1024px){
   .sidebar{
     display: none;
   }
@@ -249,8 +271,26 @@ a.active{
   .content{
     margin-left: 0px;
     flex-wrap: wrap;
+    width: 98vw;
+    max-width: 95vw;
+  }
+
+  .struct img{
+    display: none;
   }
   
+  
+}
+
+@media only screen and (max-width: 700px){
+  .para, .struct{
+    flex-direction: column;
+  }
+
+  iframe{
+    height: 400px;
+  }
+
 }
 
 /*experiments*/
@@ -261,9 +301,11 @@ input[type=checkbox] {
    left: -9999px;
 }
 
-
-
-/* Default State */
+label {  
+  display: inline-block;
+  margin: 60px 0 10px 0;
+  cursor: pointer;
+}
 
 /* Toggled State */
 input[type=checkbox]:checked ~ #hide {
@@ -273,6 +315,8 @@ input[type=checkbox]:checked ~ #hide {
 input[type=checkbox]:checked ~ label{
   display: none;
 }
+
+/*table*/
 
 th, td{
   font-family: 'Montserrat';
