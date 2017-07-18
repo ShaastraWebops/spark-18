@@ -180,17 +180,17 @@ background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, F
 
 /*text styles*/
 
-ul{
+.content ul, .sidebar ul{
   padding: 0px 15px;
   margin: 0px;
 }
 
-li{
+.content li, .sidebar li{
   list-style: none;
   padding-bottom: 15px; 
 }
 
-p{
+.content p{
   font-family: 'Open Sans', serif;
   margin: 15px 20px;
   font-size: 18px;
@@ -239,13 +239,13 @@ p{
   font-size: 18px;
 }
 
-a{
+.sidebar a{
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-a:hover{
+.sidebar a:hover{
   text-decoration: underline;
   transition: all 0.3s ease;
 }
@@ -295,28 +295,28 @@ a:hover{
 
 /*experiments*/
 
-input[type=checkbox] {
+.content input[type=checkbox] {
    position: absolute;
    top: -9999px;
    left: -9999px;
 }
 
-label {  
+.content label {  
   display: inline-block;
   margin: 60px 0 10px 0;
   cursor: pointer;
 }
 
 /* Toggled State */
-input[type=checkbox]:checked ~ #hide {
+.content input[type=checkbox]:checked ~ #hide {
    display: block;
 }
 
-input[type=checkbox]:checked ~ label{
+.content input[type=checkbox]:checked ~ label{
   display: none;
 }
 
-/*table*/
+/*table
 
 th, td{
   font-family: 'Montserrat';
@@ -330,3 +330,5 @@ table, th, td{
 tr:nth-child(3n+0){
   background-color: #ededed;
 }
+
+*/
