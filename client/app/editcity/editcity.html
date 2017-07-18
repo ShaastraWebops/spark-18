@@ -1,0 +1,76 @@
+<div class="container" style="margin-top: 50px;" ng-show="editCtrl.isAdmin()">
+
+	<div class="header" ng-init="editCtrl.manage=1">
+		<button class="btn btn-success"  ng-click="editCtrl.manage=1">Add City</button>
+		<button class="btn btn-primary" ng-click="editCtrl.manage=2">Edit City</button>
+	</div>
+
+	<div ng-show="editCtrl.manage==1">
+		<h2>Add a City</h2>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">City Name</label>
+			<input class="col-sm-12 col-md-6" class="col-sm-12 col-md-6" type="text" placeholder="Enter city name" ng-model="editCtrl.newCity.CityName"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Venue: </label>
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter venue" ng-model="editCtrl.newCity.Venue"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Time: </label> 
+			<input class="col-sm-12 col-md-6" class="col-sm-12 col-md-6" type="text" placeholder="Enter time" ng-model="editCtrl.newCity.Time"/>
+		</div class="question">
+		<div>
+			<label class="col-sm-12 col-md-6">Venue_link:(google Map link) </label> 
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter venue Link" ng-model="editCtrl.newCity.Venue_link"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Capacity</label>
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter capacity" ng-model="editCtrl.newCity.Capacity"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">no_of_registered</label>
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter capacity" ng-model="editCtrl.newCity.no_of_registered"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Active</label>
+			<input class="col-sm-12 col-md-6" type="boolean" placeholder="Enter true or false" ng-model="editCtrl.newCity.active"/>
+		</div>
+		<button class="btn btn-success" ng-click="editCtrl.addCity()">Add the City</button>
+	</div>
+
+
+	<div ng-show="editCtrl.manage==2" >
+	  <label>Edit City</label><br/>
+	  <select ng-options="x.CityName for x in editCtrl.cities" ng-model="editCtrl.curCity" ng-change="editCtrl.changeCurCity()">
+	  </select>
+	  <div class="question">
+			<label class="col-sm-12 col-md-6">City Name</label>
+			<input class="col-sm-12 col-md-6" class="col-sm-12 col-md-6" type="text" placeholder="Enter city name" ng-model="editCtrl.curCity.CityName"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Venue: </label>
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter venue" ng-model="editCtrl.curCity.Venue"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Time: </label> 
+			<input class="col-sm-12 col-md-6" class="col-sm-12 col-md-6" type="text" placeholder="Enter time" ng-model="editCtrl.curCity.Time"/>
+		</div class="question">
+		<div>
+			<label class="col-sm-12 col-md-6">Venue_link:(google Map link) </label> 
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter venue Link" ng-model="editCtrl.curCity.Venue_link"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Capacity</label>
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter capacity" ng-model="editCtrl.curCity.Capacity"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">no_of_registered</label>
+			<input class="col-sm-12 col-md-6" type="text" placeholder="Enter capacity" ng-model="editCtrl.curCity.no_of_registered"/>
+		</div>
+		<div class="question">
+			<label class="col-sm-12 col-md-6">Active</label>
+			<input class="col-sm-12 col-md-6" type="boolean" placeholder="Enter true or false" ng-model="editCtrl.curCity.active"/>
+		</div>
+		<button class="btn btn-success" ng-click="editCtrl.saveCity()">Update</button>
+	</div>
+</div>

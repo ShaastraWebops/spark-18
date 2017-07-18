@@ -1,0 +1,13 @@
+table{
+	width: 100%;
+}
+
+th, td.main{
+	border: 1px solid black;
+	margin: 1px;
+	border-collapse: collapse;
+}
+
+td{
+	padding: 3px;
+}
