@@ -42,14 +42,15 @@ export class RegistrationComponent {
 
  submit(){
   this.submitted = true;
-  // console.log(this.newparticipant, this.curCity._id);
+  console.log(this.newparticipant.class);
   this.$http.post('/api/participants', {
         name: this.newparticipant.name,
         school: this.newparticipant.school,
         rollnum: this.newparticipant.rollnum,
         mobile: this.newparticipant.mobile,
         email: this.newparticipant.email,
-        city: this.curCity._id
+        city: this.curCity._id,
+        class: this.newparticipant.class
       }).then(data => {
         console.log(data.data._id);
         this.$http.get('/api/citys/'+this.curCity._id).then(res =>{

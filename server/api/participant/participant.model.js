@@ -10,7 +10,8 @@ var ParticipantSchema = new mongoose.Schema({
   name: {type: String, required: true},
   mobile: {type: String, required: true},
   city: {type: Schema.Types.ObjectId, ref: 'City', required: true},
-  email: {type: String, required: true}
+  email: {type: String, required: true},
+  class: {type: String, required: true}
   });
 
 registerEvents(ParticipantSchema);

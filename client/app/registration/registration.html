@@ -17,6 +17,16 @@
           </p>
         </div>
 
+        <div class="input-group">
+          <label class="control-label">Class *</label><br/>
+          <select ng-model="editCtrl.newparticipant.class" style="width: 25%;">
+            <option selected="selected" value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+        </div>
+
         <div class="input-group" ng-class="{'has-error':!theform.rollno.$valid && !theform.rollno.$untouched,'has-success':theform.rollno.$valid}" >
 
           <label class="control-label">

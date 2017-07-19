@@ -13,6 +13,7 @@ export class EntriesComponent {
     this.curCity = '';
     this.regs = [];
     this.show = false;
+    this.FileSaver = FileSaver;
   }
 
   $onInit() {

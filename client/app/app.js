@@ -28,12 +28,13 @@ import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
 import editcity from './editcity/editcity.component';
 import cities from './cities/cities.component';
+import instructions from './instructions/instructions.component';
 
 import './app.css';
 
 angular.module('summitregistations2018App', [ngCookies, ngFilesaver, ngResource, ngSanitize, 'btford.socket-io',
   uiRouter, uiBootstrap, _Auth, account, admin, 'validation.match', main,registration, entries, editcity, cities,
-  constants, socket, util
+  constants, socket, util, instructions
 ])
   .config(routeConfig)
   .run(function($rootScope, $location, Auth) {

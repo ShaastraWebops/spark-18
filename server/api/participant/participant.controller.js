@@ -92,8 +92,7 @@ export function exp(req, res) {
   console.log("HI");
   return Participant.find({}).exec()
     .then(participants => {
-
-      var fields = ['Name', 'School','Roll Number','Email ID','Mobile Number'];
+      var fields = ['name', 'class', 'school','rollnum','email','mobile'];
       var csv = json2csv({ data: participants, fields: fields});
       res.setHeader('Content-disposition', 'attachment; filename=participants.csv');
       res.set('Content-Type', 'text/csv');
