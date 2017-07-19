@@ -1,1 +1,16 @@
-<div>This is the cities view.</div>
+<div class="container">
+	<table>
+		<tr>
+			<th style="width: 20%;" class="cityClass">City</th>
+			<th style="width: 25%;" class="cityClass">Venue</th>
+			<th style="width: 10%;" class="cityClass">Time</th>
+			<th style="width: 45%;" class="cityClass">Contact</th>
+		</tr>
+		<tr ng-repeat="city in citiesCtrl.cities">
+			<td class="cityClass">{{city.CityName}}</td>
+			<td class="cityClass"><a ng-href="{{city.Venue_link}}">{{city.Venue}}</a></td>
+			<td class="cityClass">{{city.Time}}</td>
+			<td class="cityClass">{{city.contact}}</td>
+		</tr>
+	</table>
+</div>

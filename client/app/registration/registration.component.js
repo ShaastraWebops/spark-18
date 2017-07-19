@@ -15,42 +15,30 @@ export class RegistrationComponent {
     this.$http = $http;
     this.newparticipant = {
       name: '',
-      insti: '',
-      stream: '',
-      mobile_no: '',
-      alt_mobno: '',
+      rollnum: '',
+      school: '',
+      mobile: '',
       email: '',
-      q1_ans: '',
-      q2_ans: '',
-      team_name: '',
-      member_names: [],
-      member_emails: []
+      city: ''
     };
 
     this.submitted = false;
+    this.show = false;
     this.curCity = '';
     this.$http.get('/api/citys').then(res => {
       this.cities = res.data;
-    })
+      console.log(this.curCity);
+    });
   }
 
   $onInit() {
   this.step=1;
   }
 
-  submitform(){
-    this.$http.get('/api/participants').then(res => {
-      this.count = res.data.length+1;
-      if(this.count<10)
-        this.summitID = 'SUM18000'+this.count;
-      else if(this.count<100)
-        this.summitID = 'SUM1800'+this.count;
-      else if(this.count<1000)
-        this.summitID = 'SUM180'+this.count;
-      else if(this.count<10000)
-        this.summitID = 'SUM18'+this.count;
-      this.submit();
-    });
+  changeCurCity(){
+    this.$http.get('/api/citys/'+this.curCity._id).then(res => {
+      this.show = res.data.active;
+    })
   }
 
  submit(){
@@ -119,6 +107,6 @@ export default angular.module('summitregistations2018App.registration', [uiRoute
   .component('registration', {
     template: require('./registration.html'),
     controller: RegistrationComponent,
-    controllerAs: 'ctrl'
+    controllerAs: 'editCtrl'
   })
   .name;

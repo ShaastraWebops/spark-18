@@ -7,8 +7,11 @@ import routes from './cities.routes';
 
 export class CitiesComponent {
   /*@ngInject*/
-  constructor() {
-    this.message = 'Hello';
+  constructor($http) {
+    this.$http = $http;
+    this.$http.get('/api/citys').then(res => {
+      this.cities = res.data;
+    });
   }
 }
 

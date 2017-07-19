@@ -52,6 +52,6 @@ angular.module('summitregistations2018App', [ngCookies, ngFilesaver, ngResource,
 angular.element(document)
   .ready(() => {
     angular.bootstrap(document, ['summitregistations2018App'], {
-      strictDi: true
+      strictDi: false
     });
   });

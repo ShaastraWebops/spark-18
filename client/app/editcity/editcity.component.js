@@ -22,7 +22,7 @@ export class EditcityComponent {
         Time: '',
         Venue_link: ' ',
         Capacity: ' ',
-        no_of_registered: ' ',
+        contact: ' ',
         active:true
     }
   }
@@ -42,7 +42,7 @@ export class EditcityComponent {
       Time: this.newCity.Time,
       Venue_link: this.newCity.Venue_link,
       Capacity: this.newCity.Capacity,
-      no_of_registered: this.newCity.no_of_registered,
+      contact: this.newCity.contact,
       active: this.newCity.active
     }).then(data => {
       this.newCity = {};
@@ -58,7 +58,7 @@ export class EditcityComponent {
       Time: this.curCity.Time,
       Venue_link: this.curCity.Venue_link,
       Capacity: this.curCity.Capacity,
-      no_of_registered: this.curCity.no_of_registered,
+      no_of_registered: this.curCity.contact,
       active: this.curCity.active
     }).then(res => {
       alert('Updated Successfully!');
