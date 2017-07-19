@@ -2,7 +2,7 @@
   <div id="msform" ng-init="step=1">
     <fieldset ng-show="step==1">
       <h2 class="fs-title">Spark Registration Form</h2>
-      <label class="control-label">City* </label><br/>
+      <label class="control-label">City * </label><br/>
       <select ng-model="editCtrl.curCity" ng-options="city as city.CityName for city in editCtrl.cities" ng-change="editCtrl.changeCurCity()" style="width: 25%; margin-bottom: 20px;">
       </select>
       <div ng-show="editCtrl.show">
@@ -11,7 +11,7 @@
             <i class="glyphicon glyphicon-user" style="float:left">
             </i> Name *
           </label>
-          <input type="text" name="Name" placeholder="Your Name" ng-required="true" ng-model="ctrl.newparticipant.name" class="form-control"/>
+          <input type="text" name="Name" placeholder="Your Name" ng-required="true" ng-model="editCtrl.newparticipant.name" class="form-control"/>
           <p class="help-block" ng-show="theform.Name.$error.required && theform.Name.$touched">
             This field is required
           </p>
@@ -23,7 +23,7 @@
             <i class="glyphicon glyphicon-education" style="float:left">
             </i> Roll No *
           </label>
-          <input type="text" name="rollno" ng-required="true" placeholder="Enter your roll no" ng-model="ctrl.newparticipant.rollno" class="form-control"/>
+          <input type="text" name="rollno" ng-required="true" placeholder="Enter your roll no" ng-model="editCtrl.newparticipant.rollnum" class="form-control"/>
           <p class="help-block" ng-show="theform.rollno.$error.required && theform.rollno.$touched">
             This field is required
           </p>
@@ -31,7 +31,7 @@
 
         <div class="input-group" ng-class="{'has-error':!theform.school.$valid && !theform.school.$untouched,'has-success':theform.school.$valid}"  >
           <label class="control-label">School *</label>
-          <input type="text" class="form-control" name="school" ng-required="true" placeholder="Stream" ng-model="ctrl.newparticipant.school" />
+          <input type="text" class="form-control" name="school" ng-required="true" placeholder="Stream" ng-model="editCtrl.newparticipant.school" />
           <p class="help-block" ng-show="theform.school.$error.required && theform.school.$touched">
           This field is required
           </p>
@@ -39,7 +39,7 @@
 
         <div class="input-group has-feedback" ng-class="{'has-error':!theform.email.$valid && (theform.email.$dirty || theform.email.$touched),'has-success':theform.email.$valid}" >
           <label class="control-label">Email ID (Don't worry, we send no spam) * </label>
-          <input type="email" name="email" ng-required="true" ng-pattern="/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" class="form-control" placeholder="Enter your Email-id" ng-model="ctrl.newparticipant.email"/>
+          <input type="email" name="email" ng-required="true" ng-pattern="/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" class="form-control" placeholder="Enter your Email-id" ng-model="editCtrl.newparticipant.email"/>
           <p class="help-block" ng-show="theform.email.$error.required && theform.email.$touched">
           This field is required
           </p>
@@ -53,7 +53,7 @@
 
         <div class="input-group has-feedback" ng-class="{'has-error':!theform.mobno.$valid && (theform.mobno.$dirty || theform.mobno.$touched),'has-success':theform.mobno.$valid}" >
           <label class="control-label">Mobile Number *</label>
-          <input type="text" name="mobno" ng-required="true" class="form-control" ng-pattern="/^[0-9]{10}$/" placeholder="Your Mobile number" ng-model="ctrl.newparticipant.mobile_no" />
+          <input type="text" name="mobno" ng-required="true" class="form-control" ng-pattern="/^[0-9]{10}$/" placeholder="Your Mobile number" ng-model="editCtrl.newparticipant.mobile" />
           <div ng-class="{'glyphicon glyphicon-ok form-control-feedback':theform.mobno.$valid, 'glyphicon glyphicon-remove-sign form-control-feedback': !theform.mobno.$valid && (!theform.mobno.$pristine || theform.mobno.$touched)}">
           </div>
           <p class="help-block" ng-show="theform.mobno.$error.required && theform.mobno.$touched">
@@ -64,7 +64,7 @@
           </p>
         </div>
 
-        <button name="Submit"  class="submit action-button" value="submit" ng-disabled="theform.Name.$error.required || theform.rollno.$error.required || theform.school.$error.required"  ng-click ="ctrl.submit()"  >Submit</button>
+        <button name="Submit"  class="submit action-button" value="submit" ng-disabled="theform.Name.$error.required || theform.rollno.$error.required || theform.school.$error.required || theform.email.$error.required || theform.mobno.$error.required"  ng-click ="editCtrl.submit()"  >Submit</button>
         
         <div style="color:rgb(217,83,79);font-size:13px" >
           The fields marked with * are required
@@ -74,8 +74,5 @@
         Sorry! The registrations for this Spark are full.
       </div>
     </fieldset>
-
-
-
   </div>
 </form>

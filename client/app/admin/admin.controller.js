@@ -4,13 +4,18 @@ export default class AdminController {
   users: Object[];
 
   /*@ngInject*/
-  constructor(User) {
+  constructor($http) {
     // Use the User $resource to fetch all users
-    this.users = User.query();
+    this.$http = $http;
+    this.curCity = '';
+    this.registrations = false;
   }
 
-  delete(user) {
-    user.$remove();
-    this.users.splice(this.users.indexOf(user), 1);
+  $onInit(){
+    this.$http.get('/api/citys').then(res => {
+      this.cities = res.data;
+    });
   }
+
+
 }

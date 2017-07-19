@@ -9,24 +9,37 @@ export class EntriesComponent {
   /*@ngInject*/
   constructor($http, Auth, $scope, FileSaver) {
     this.$http = $http;
-    this.$scope = $scope;
-        this.FileSaver = FileSaver;
     this.isAdmin = Auth.isAdminSync;
+    this.curCity = '';
+    this.regs = [];
+    this.show = false;
   }
 
   $onInit() {
-    this.$http.get('/api/participants').then(res => {
-      this.mem = res.data;
-      console.log(this.data);
+    this.$http.get('/api/citys').then(res => {
+      this.cities = res.data;
     })
   }
-  download = function(name,team) {
-    this.$http.get('/file/'+ name,{ responseType: "arraybuffer"  }).then(response => {
-      var blob = new Blob([response.data], { type: "application/pdf"});
-    this.FileSaver.saveAs(blob, team + ".pdf");
-    });
-  }
-  exp = function() {
+ 
+ getRegistrations(){
+    this.show = true;
+    this.regs = this.curCity.regs;
+    this.regns = [];
+    for(var i=0; i<this.regs.length; i++)
+    {
+      this.$http.get('/api/participants/'+this.regs[i]).then(res =>{
+        this.regns.push(res.data);
+      });
+    }
+ }
+
+ initRow(id){
+    this.$http.get('/api/participants/'+id).then(res => {
+      this.curRegn = res.data;
+    })
+ }
+ 
+  exp() {
      this.$http.get('/api/participants/export').then(response => {
        var data = new Blob([response.data], { type: 'text/csv;charset=utf-8' });
        this.FileSaver.saveAs(data, 'participants.csv');

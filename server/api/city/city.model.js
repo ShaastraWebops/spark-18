@@ -1,6 +1,7 @@
 'use strict';
 
 import mongoose from 'mongoose';
+var Schema = mongoose.Schema;
 import {registerEvents} from './city.events';
 
 var CitySchema = new mongoose.Schema({
@@ -10,7 +11,8 @@ var CitySchema = new mongoose.Schema({
 	Venue_link: {type: String, required:true},
 	Capacity: {type: String, required:false},
 	contact: {type: String, required: true},
-	active: {type: Boolean, default:true} 
+	active: {type: Boolean, default:true},
+	regs: [{type: Schema.Types.ObjectId, ref: 'Participant'}]
 });
 
 registerEvents(CitySchema);
