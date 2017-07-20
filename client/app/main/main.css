@@ -82,8 +82,9 @@ body{
   margin-bottom: 50px;
 }
 
+
 .w.m{
-  margin-bottom: 60px;
+  margin-bottom: 70px; /*for bottom register in mobile*/
 }
 
 .when{
@@ -324,6 +325,10 @@ body{
 
   iframe{
     height: 275px;
+  }
+
+  .w{
+    flex-direction: column;
   }
 
 }
