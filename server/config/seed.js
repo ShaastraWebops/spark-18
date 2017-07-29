@@ -43,6 +43,20 @@ export default function seedDatabaseIfNeeded() {
         {
           provider: 'local',
           role: 'admin',
+          name: 'Shaastra Webops',
+          email: 'webops@shaastra.org',
+          password: '#123456!'
+        },
+        {
+          provider: 'local',
+          role: 'admin',
+          name: 'Student Relations',
+          email: 'studentrelations@shaastra.org',
+          password: '#123456!'
+        },
+        {
+          provider: 'local',
+          role: 'admin',
           name: 'Gokulan',
           email: 'kulan@shaastra.org',
           password: '#1111111'
