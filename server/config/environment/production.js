@@ -22,5 +22,5 @@ module.exports = {
       || 'mongodb://'+process.env.SPARK_USER+":"+process.env.SPARK_PASSWORD+"@localhost/spark"
   },
 
-  seedDB: true
+  seedDB: false
 };
