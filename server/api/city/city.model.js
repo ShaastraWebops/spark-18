@@ -8,6 +8,7 @@ var CitySchema = new mongoose.Schema({
 	CityName: {type: String, required: true},
 	Venue: {type: String, required:true},
 	Time: {type: String, required:true},
+	date: {type: String, required: true},
 	Venue_link: {type: String, required:true},
 	Capacity: {type: String, required:false},
 	contact: {type: String, required: true},

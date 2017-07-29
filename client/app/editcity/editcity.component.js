@@ -20,6 +20,7 @@ export class EditcityComponent {
         CityName: '',
         Venue: '',
         Time: '',
+        date: '',
         Venue_link: ' ',
         Capacity: ' ',
         contact: ' ',
@@ -40,6 +41,7 @@ export class EditcityComponent {
       CityName: this.newCity.CityName,
       Venue: this.newCity.Venue,
       Time: this.newCity.Time,
+      date: this.newCity.date,
       Venue_link: this.newCity.Venue_link,
       Capacity: this.newCity.Capacity,
       contact: this.newCity.contact,
@@ -55,6 +57,7 @@ export class EditcityComponent {
     this.$http.put(`/api/citys/`+this.curCity._id,{
       CityName: this.curCity.CityName,
       Venue: this.curCity.Venue,
+      date: this.curCity.date,
       Time: this.curCity.Time,
       Venue_link: this.curCity.Venue_link,
       Capacity: this.curCity.Capacity,
