@@ -9,7 +9,7 @@
 		<tr ng-repeat="city in citiesCtrl.cities">
 			<td class="cityClass">{{city.CityName}}</td>
 			<td class="cityClass"><a ng-href="{{city.Venue_link}}">{{city.Venue}}</a></td>
-			<td class="cityClass">{{city.Time}}</td>
+			<td class="cityClass">{{city.date}},{{city.Time}}</td>
 			<td class="cityClass">{{city.contact}}</td>
 		</tr>
 	</table>
