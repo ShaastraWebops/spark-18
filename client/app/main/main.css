@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+
 body{
   width: 100%;
   display: flex;
@@ -84,7 +86,7 @@ body{
 
 
 .w.m{
-  margin-bottom: 70px; /*for bottom register in mobile*/
+   /*for bottom register in mobile*/
 }
 
 .when{
@@ -93,6 +95,16 @@ body{
 
 .where{
   flex: 2;
+}
+
+.contact{
+  
+  display: none;
+}
+
+.contact a{
+  margin-left: 20px;
+  text-decoration: underline;
 }
 
 .w h1{
@@ -194,7 +206,8 @@ body{
 }
 
 .content p{
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', serif;
+  font-weight: 300;
   margin: 15px 20px;
   font-size: 18px;
   line-height: 1.8;
@@ -202,7 +215,8 @@ body{
 }
 
 .struct li{
-  font-family: 'Open Sans', serif;
+  font-family: 'Montserrat', serif;
+  font-weight: 300;
   font-size: 16px;
   padding-left: 5px;
 }
@@ -300,6 +314,16 @@ body{
     display: inline-block;
   }
   
+  .contact{
+    
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+
+  .contact a{
+    color: white;
+    font-size: 36px;
+  }
 }
 
 @media only screen and (max-width: 700px){
