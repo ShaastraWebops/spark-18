@@ -26,6 +26,7 @@ export class EditcityComponent {
         contact: ' ',
         active:true
     }
+    this.curCity = this.newCity;
   }
 
   $onInit() {
@@ -54,6 +55,7 @@ export class EditcityComponent {
   }
 
   saveCity(){
+    console.log(this.curCity);
     this.$http.put(`/api/citys/`+this.curCity._id,{
       CityName: this.curCity.CityName,
       Venue: this.curCity.Venue,
@@ -61,7 +63,7 @@ export class EditcityComponent {
       Time: this.curCity.Time,
       Venue_link: this.curCity.Venue_link,
       Capacity: this.curCity.Capacity,
-      no_of_registered: this.curCity.contact,
+      contact: this.curCity.contact,
       active: this.curCity.active
     }).then(res => {
       alert('Updated Successfully!');
