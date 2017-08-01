@@ -60,10 +60,9 @@ export class RegistrationComponent {
             regs: this.arr
           }).then(res =>{
             alert('Successfully Registered');
+            window.location = '/'
           })
         })
-        // window.alert('Registered Successfully!');
-        // window.location = '/';
       });
   }
 
