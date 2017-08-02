@@ -11,6 +11,7 @@ export class CitiesComponent {
     this.$http = $http;
     this.$http.get('/api/citys').then(res => {
       this.cities = res.data;
+      this.cities.sort(function(a,b){return (a.CityName - b.CityName)});
     });
   }
 }
