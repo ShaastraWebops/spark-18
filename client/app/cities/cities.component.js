@@ -24,11 +24,12 @@ export class CitiesComponent {
 
 
 function compare(a,b) {
-  if (a.CityName < b.CityName)
+  if (a.CityName.toLowerCase() < b.CityName.toLowerCase())
     return -1;
-  if (a.CityName > b.CityName)
+  else if (a.CityName.toLowerCase() > b.CityName.toLowerCase())
     return 1;
-  return 0;
+  else if (a.CityName.toLowerCase()== b.CityName.toLowerCase())
+    return 0;
 }
 
 
