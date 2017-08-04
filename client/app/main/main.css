@@ -172,6 +172,11 @@ body{
   transition: all 200ms ease-in;
 }
 
+.spons img{
+  padding: 40px 20px;
+  height: 300px;
+}
+
 .struct img{
   filter: invert();
   opacity: 0.3;
@@ -324,6 +329,17 @@ body{
     color: white;
     font-size: 36px;
   }
+
+  .spons{
+    text-align: center;
+  }
+
+  .spons img{
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
 }
 
 @media only screen and (max-width: 700px){
