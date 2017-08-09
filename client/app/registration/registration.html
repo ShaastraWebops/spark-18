@@ -42,7 +42,7 @@
 
         <div class="input-group" ng-class="{'has-error':!theform.school.$valid && !theform.school.$untouched,'has-success':theform.school.$valid}"  >
           <label class="control-label">School *</label>
-          <input type="text" class="form-control" name="school" ng-required="true" placeholder="Stream" ng-model="editCtrl.newparticipant.school" />
+          <input type="text" class="form-control" name="school" ng-required="true" placeholder="School" ng-model="editCtrl.newparticipant.school" />
           <p class="help-block" ng-show="theform.school.$error.required && theform.school.$touched">
           This field is required
           </p>
@@ -71,7 +71,7 @@
           This field is required
           </p>
           <p class="help-block" ng-show="theform.mobno.$invalid && theform.mobno.$dirty">
-            Enter a Valid Mobile No. thats is 10-Digit long
+            Enter a Valid Mobile No. that is 10-Digit long
           </p>
         </div>
 
