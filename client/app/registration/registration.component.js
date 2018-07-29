@@ -14,11 +14,20 @@ export class RegistrationComponent {
 
     this.$http = $http;
     this.newparticipant = {
-      name: '',
-      rollnum: '',
-      school: '',
-      mobile: '',
-      email: ''
+      name1: '',
+      rollnum1: '',
+      school1: '',
+      mobile1: '',
+      email1: '',
+      class1: '',
+      city1: '',
+      name2: '',
+      rollnum2: '',
+      school2: '',
+      mobile2: '',
+      email2: '',
+      class2: '',
+      city2: ''
     };
 
     this.submitted = false;
@@ -42,28 +51,25 @@ export class RegistrationComponent {
 
  submit(){
   this.submitted = true;
-  console.log(this.newparticipant.class);
+  console.log(this.newparticipant);
   this.$http.post('/api/participants', {
-        name: this.newparticipant.name,
-        school: this.newparticipant.school,
-        rollnum: this.newparticipant.rollnum,
-        mobile: this.newparticipant.mobile,
-        email: this.newparticipant.email,
-        city: this.curCity._id,
-        class: this.newparticipant.class
-      }).then(data => {
-        console.log(data.data._id);
-        this.$http.get('/api/citys/'+this.curCity._id).then(res =>{
-          this.arr = res.data.regs;
-          this.arr.push(data.data._id);
-          this.$http.put('/api/citys/'+this.curCity._id, {
-            regs: this.arr
-          }).then(res =>{
+    name1: this.newparticipant.name1,
+    school1: this.newparticipant.school1,
+    rollnum1: this.newparticipant.rollnum1,
+    mobile1: this.newparticipant.mobile1,
+    email1: this.newparticipant.email1,
+    class1: this.newparticipant.class2,
+    name2: this.newparticipant.name2,
+    school2: this.newparticipant.school2,
+    rollnum2: this.newparticipant.rollnum2,
+    mobile2: this.newparticipant.mobile2,
+    email2: this.newparticipant.email2,
+    class2: this.newparticipant.class2
+  }). then(function(){
             alert('Successfully Registered');
-            window.location = '/'
-          })
-        })
-      });
+            window.location = '/';
+  }
+          )
   }
 
 }
@@ -76,3 +82,15 @@ export default angular.module('summitregistations2018App.registration', [uiRoute
     controllerAs: 'editCtrl'
   })
   .name;
+
+
+  /*
+then(data => {
+        console.log(data.data._id);
+        this.$http.get('/api/citys/'+this.curCity._id).then(res =>{
+          this.arr = res.data.regs;
+          this.arr.push(data.data._id);
+          this.$http.put('/api/citys/'+this.curCity._id, {
+            regs: this.arr
+          })
+  */
