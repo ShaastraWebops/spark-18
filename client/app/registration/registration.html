@@ -3,8 +3,11 @@
     <fieldset ng-show="step==1">
       <h2 class="fs-title">Spark Registration Form</h2>
       <label class="control-label">City * </label><br/>
-      <select ng-model="editCtrl.curCity" ng-options="city as city.CityName for city in editCtrl.cities" ng-change="editCtrl.changeCurCity()" style="width: 25%; margin-bottom: 20px;">
+      <input ng-model="editCtrl.curCity" ng-change="editCtrl.changeCurCity()" style="width: 25%; margin-bottom: 20px;" ng-hide="editCtrl.select">
+      </input>
+      <select ng-model="editCtrl.curCity" ng-options="city as city.CityName for city in editCtrl.cities" ng-change="editCtrl.changeCurCity()" style="width: 25%; margin-bottom: 20px;"ng-show="editCtrl.select">
       </select>
+
       <div ng-show="editCtrl.show">
         <div class="input-group" ng-class="{'has-error':!theform.Name.$valid && !theform.Name.$untouched,'has-success':theform.Name.$valid}" >
           <label class="control-label">
