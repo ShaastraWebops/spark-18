@@ -83,9 +83,23 @@ export function show(req, res) {
 // Creates a new Participant in the DB
 export function create(req, res) {
   //Participant.members.push(req.body.members);
-  return Participant.create(req.body)
-    .then(respondWithResult(res, 201))
-    .catch(handleError(res));
+ var part =new Participant();
+ part.name1= req.body.name1;
+ part.name2= req.body.name2;
+ part.email1= req.body.email1;
+ part.email2= req.body.email2;
+ part.class1= req.body.class1;
+ part.class2= req.body.class2;
+ part.city1= req.body.city1;
+ part.city2= req.body.city2;
+ part.rollnum1= req.body.rollnum1;
+ part.rollnum2= req.body.rollnum2;
+ part.mobile1= req.body.mobile1;
+ part.mobile2= req.body.mobile2;
+ part.school1= req.body.school1;
+ part.school2= req.body.school2;
+ part.save();
+ res.send("Succesful");
 }
 
 export function exp(req, res) {
