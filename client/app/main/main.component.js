@@ -3,13 +3,13 @@ import uiRouter from 'angular-ui-router';
 import routing from './main.routes';
 
 export class MainController {
-  
-
+  cities=[];
   /*@ngInject*/
   constructor($http, Auth) {
     this.$http = $http;
     this.isAdmin = Auth.isAdminSync;
     this.awesomeThings = [];
+    this.cities = ['Chennai','Madurai','Coimbatore','Trichy','Thanjavur','Salem','Erode','Trivandrum','Kochi','Thrissur','Kozhikode','Visakhapatnam','Vijayawada','Hyderabad','Hubli','Bengaluru','Delhi','Chandigarh','Mumbai','Pune','Kolkata','Bhubaneswar'];
     this.newThing = '';
   }
 
