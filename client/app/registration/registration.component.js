@@ -9,9 +9,8 @@ export class RegistrationComponent {
 
   members = [];
 
-  constructor($http,$scope) {
+  constructor($http,$scope,$stateParams) {
         'ngInject';
-
     this.$http = $http;
     this.newparticipant = {
       name: '',
@@ -23,10 +22,16 @@ export class RegistrationComponent {
 
     this.submitted = false;
     this.show = false;
-    this.curCity = '';
+    this.select = true;
+    if($stateParams.city){
+      this.show = true;
+      this.select = false;
+    }
+    this.curCity = "";
     this.$http.get('/api/citys').then(res => {
       this.cities = res.data;
-      console.log(this.curCity);
+      this.curCity = $stateParams.city;
+
     });
   }
 

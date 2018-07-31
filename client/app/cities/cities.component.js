@@ -10,9 +10,6 @@ export class CitiesComponent {
 
   cities = [];
 
-
-
-  
   constructor($http) {
     this.$http = $http;
     this.$http.get('/api/citys').then(res => {

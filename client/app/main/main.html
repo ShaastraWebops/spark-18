@@ -1,3 +1,4 @@
+
 <div class="sidebar">
   <ul>
     <li><a href="#">Spark</a></li>
@@ -19,7 +20,10 @@
       <h1>SPARK</h1>
       <img src="../assets/images/bulb.svg">
       <p>
-        SPARK is Shaastra's flagship event for school students which aims to give a technical flavour to school students. It is conducted every year across the country, in the cities of Chennai, Mumbai, Pune, Delhi, Kolkata, Hyderabad, Cochin, Trivandrum and <a href="/cities">many more...</a>
+        SPARK is Shaastra's flagship event for school students which aims to give a technical flavour to school students. It is conducted every year across the country, in the cities of
+        <a ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
+              &ensp;{{city}} ,
+        </a>.
       </p>
     </div>
     
