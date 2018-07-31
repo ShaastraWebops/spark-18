@@ -98,6 +98,7 @@ export function create(req, res) {
  part.mobile2= req.body.mobile2;
  part.school1= req.body.school1;
  part.school2= req.body.school2;
+ part.city = req.body.city;
  part.save();
  res.send("Succesful");
 }

@@ -9,6 +9,7 @@ var ParticipantSchema = new mongoose.Schema({
   rollnum1: {type: String, required: true},
   name1: {type: String, required: true},
   mobile1: {type: String, required: true},
+  city: {type: String, required: true},
   //city1: {type: Schema.Types.ObjectId, ref: 'City', required: true},
   email1: {type: String, required: true},
   class1: {type: String, required: true},

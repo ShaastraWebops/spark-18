@@ -7,10 +7,10 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/summitregistations2018-dev'
+    uri: 'mongodb://localhost/spark18-dev'
   },
 
   // Seed database on startup
-  seedDB: true
+  seedDB: false
 
 };

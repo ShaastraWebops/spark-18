@@ -90,9 +90,6 @@
         <div class="col-sm-6">
 
             <h5>Second Participant</h5>
-            <label class="control-label">City * </label><br/>
-            <select ng-model="editCtrl.curCity2" ng-options="city as city.CityName for city in editCtrl.cities" ng-change="editCtrl.changeCurCity()" style="width: 25%; margin-bottom: 20px;">
-            </select>
             <!--<div ng-show="editCtrl.show" > -->
               <div class="input-group" ng-class="{'has-error':!theform.Name.$valid && !theform.Name.$untouched,'has-success':theform.Name.$valid}" >
                 <label class="control-label">
@@ -104,7 +101,7 @@
                   This field is required
                 </p>
               </div>
-      
+
               <div class="input-group">
                 <label class="control-label">Class *</label><br/>
                 <select ng-model="editCtrl.newparticipant.class2" style="width: 25%;">
@@ -115,9 +112,9 @@
                   <option value="12">12</option>
                 </select>
               </div>
-      
+
               <div class="input-group" ng-class="{'has-error':!theform.rollno.$valid && !theform.rollno.$untouched,'has-success':theform.rollno.$valid}" >
-      
+
                 <label class="control-label">
                   <i class="glyphicon glyphicon-education" style="float:left">
                   </i> Roll No *
@@ -127,7 +124,7 @@
                   This field is required
                 </p>
               </div>
-      
+
               <div class="input-group" ng-class="{'has-error':!theform.school.$valid && !theform.school.$untouched,'has-success':theform.school.$valid}"  >
                 <label class="control-label">School *</label>
                 <input type="text" class="form-control" name="school" ng-required="true" placeholder="School" ng-model="editCtrl.newparticipant.school2" />
@@ -135,7 +132,7 @@
                 This field is required
                 </p>
               </div>
-      
+
               <div class="input-group has-feedback" ng-class="{'has-error':!theform.email.$valid && (theform.email.$dirty || theform.email.$touched),'has-success':theform.email.$valid}" >
                 <label class="control-label">Email ID * </label>
                 <input type="email" name="email" ng-required="true" ng-pattern="/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/" class="form-control" placeholder="Enter your Email-id" ng-model="editCtrl.newparticipant.email2"/>
@@ -144,12 +141,12 @@
                 </p>
                 <div ng-class="{'glyphicon glyphicon-ok form-control-feedback':theform.email.$valid, 'glyphicon glyphicon-remove-sign form-control-feedback': !theform.email.$valid && (!theform.email.$pristine || theform.email.$touched)}">
                 </div>
-      
+
                 <p class="help-block" ng-show="theform.email.$invalid && theform.email.$dirty">
                   Please Enter a valid Email ID
                 </p>
               </div>
-      
+
               <div class="input-group has-feedback" ng-class="{'has-error':!theform.mobno.$valid && (theform.mobno.$dirty || theform.mobno.$touched),'has-success':theform.mobno.$valid}" >
                 <label class="control-label">Mobile Number *</label>
                 <input type="text" name="mobno" ng-required="true" class="form-control" ng-pattern="/^[0-9]{10}$/" placeholder="Your Mobile number" ng-model="editCtrl.newparticipant.mobile2" />
@@ -162,12 +159,12 @@
                   Enter a Valid Mobile No. that is 10-Digit long
                 </p>
               </div>
-      
+
               </div>
-      
+
         </div>
         <button name="Submit"  class="submit action-button" value="submit" ng-disabled="theform.Name.$error.required || theform.rollno.$error.required || theform.school.$error.required || theform.email.$error.required || theform.mobno.$error.required"  ng-click ="editCtrl.submit()"  >Submit</button>
-        
+
         <div style="color:rgb(217,83,79);font-size:13px" >
           The fields marked with * are required
         </div>
