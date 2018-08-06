@@ -1,23 +1,31 @@
-
-<div class="sidebar">
-  <ul>
-    <li><a href="#">Spark</a></li>
-    <li><a href="#2">Structure</a></li>
-    <li><a href="#3">When & <br>Where</a></li>
-    <li><a href="/cities">Contact</a></li>
-    <li><a href="/instructions">General Instructions</a></li>
-    <li><a href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a></li>
-   <li ng-show="mainCtrl.isAdmin()"><a href="/editcity">Manage City</a></li>
-   <li ng-show="mainCtrl.isAdmin()"><a href="/entries">Registrations</a></li>
-  </ul>
-</div>
-
 <div class="content">
   <div class="para" id="1">
-    <div class="spark m">
+    <div class="spark m"> 
+
       <h2>Shaastra Presents</h2>
-      <h1>SPARK</h1>
-      <img src="../assets/images/bulb.svg">
+      <h1 style="text-align:center; ">SPARK</h1>
+      <h2>Make Your mark .... it's the spark</h2>
+  </div>
+   </div>
+    </div>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <ul class="navbar-nav">
+    <li class="navbar-brand" ><a style="color: white;" href="#">Spark</a></li>
+    <li class="navbar-brand" ><a  style="color: white;"href="#2">Structure</a></li>
+     <li class="navbar-brand" ><a style="color: white;" href="#3">When & <br>Where</a></li>
+    <li class="navbar-brand" ><a  style="color: white;" href="/cities">Contact</a></li>
+    <li class="navbar-brand" ><a style="color: white;" href="/instructions">General Instructions</a></li>
+    <li class="navbar-brand" ><a style="color: white;" href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a></li>
+   <li class="navbar-brand"  ng-show="mainCtrl.isAdmin()"><a style="color: white;" href="/editcity">Manage City</a></li>
+   <li class="navbar-brand"  ng-show="mainCtrl.isAdmin()"><a style="color: white;" href="/entries">Registrations</a></li>
+  </ul>
+</nav>
+<div class="content">
+  <div class="para" id="1">
+    <div class="spark m"> 
+
       <p>
         SPARK is Shaastra's flagship event for school students which aims to give a technical flavour to school students. It is conducted every year across the country, in the cities of <b>(click on a city to register for that city)</b>
         <a ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
