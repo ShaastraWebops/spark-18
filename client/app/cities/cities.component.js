@@ -20,6 +20,7 @@ export class CitiesComponent {
             "name": "Aswath Hari",
             "cityName": "Coimbatore-Palakkad",
             "no": "9655528198",
+            "date": "11/08/18",
             "email": "aswathh012@gmail.com"
         },
         {
