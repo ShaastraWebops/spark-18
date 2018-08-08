@@ -38,6 +38,8 @@ export class CitiesComponent {
             "sno": "3",
             "name": "Nikilesh B",
             "cityName": "Madurai",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9500893173 / 9080423761",
             "email": "nikilesh21@gmail.com"
         },
@@ -55,6 +57,8 @@ export class CitiesComponent {
             "sno": "5",
             "name": "Tejashree Murugan",
             "cityName": "Chennai",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9500147200",
             "email": "tejashree.murugan@gmail.com"
         },
@@ -62,6 +66,8 @@ export class CitiesComponent {
             "sno": "6",
             "name": "Aman Arora",
             "cityName": "Hyderabad",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9494600201",
             "email": "amanhyd99@gmail.com"
         },
@@ -70,7 +76,7 @@ export class CitiesComponent {
             "name": "Adithya Swaroop",
             "cityName": "Vishakapatnam",
             "date": "19/08/18",
-            "address": "Ascent Junior College&#10;10-3-3, CBM Compound Rd, Opp Sampath Vinayak Temple, Facor Layout, Ram Nagar, Visakhapatnam, Andhra Pradesh 530003&#10;&#10;https://goo.gl/maps/aJ8m3ER6DPP2",
+            "address": "Ascent Junior College&#10;10-3-3, CBM Compound Rd, Opp Sampath Vinayak Temple, Facor Layout, Ram Nagar, Visakhapatnam, Andhra Pradesh https://goo.gl/maps/aJ8m3ER6DPP2",
             "no": "9492218401",
             "coord": "yes",
             "email": "as.atp.gdn@gmail.com"
@@ -79,6 +85,8 @@ export class CitiesComponent {
             "sno": "8",
             "name": "Dasari Aswin Dutt",
             "cityName": "Vijayawada",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9182823241",
             "coord": "no ",
             "email": "dasariaswindutt@gmail.com"
@@ -97,6 +105,8 @@ export class CitiesComponent {
             "sno": "10",
             "name": "Simran Raj",
             "cityName": "Bangalore",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9840880260 / 7992374298",
             "email": "ch17b104@smail.iitm.ac.in"
         },
@@ -133,6 +143,8 @@ export class CitiesComponent {
             "sno": "14",
             "name": "Thrilok Aashish A",
             "cityName": "Thrissur",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9487818899",
             "email": "thrilok96@gmail.com"
         },
@@ -150,6 +162,8 @@ export class CitiesComponent {
             "sno": "16",
             "name": "Prajeet Oza",
             "cityName": "Chandigarh",
+            "date":"TBA",
+            "address": "TBA",
             "no": "8767888916 / 9840899416",
             "email": "oza.prajeet@gmail.com"
         },
@@ -157,6 +171,8 @@ export class CitiesComponent {
             "sno": "17",
             "name": "Apurva Kale",
             "cityName": "Mumbai",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9834885225",
             "email": "apurvaskale555@gmail.com"
         },
@@ -164,6 +180,8 @@ export class CitiesComponent {
             "sno": "18",
             "name": "Apurva Kale",
             "cityName": "Pune",
+            "date":"TBA",
+            "address": "TBA",
             "no": "9834885225",
             "email": "apurvaskale555@gmail.com"
         },
