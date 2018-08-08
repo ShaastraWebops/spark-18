@@ -20,6 +20,7 @@ export class CitiesComponent {
             "name": "Aswath Hari",
             "cityName": "Coimbatore-Palakkad",
             "no": "9655528198",
+            "address": "Suguna PIP School, Nehru Nagar, Kalapatty Road, (Adjacent to Suguna Polytechnic), Coimbatore - 641014, TamilNadu.",
             "date": "11/08/18",
             "email": "aswathh012@gmail.com"
         },
