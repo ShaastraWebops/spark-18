@@ -1,111 +1,289 @@
-
-<div class="sidebar">
-  <ul>
-    <li><a href="#">Spark</a></li>
-    <li><a href="#2">Structure</a></li>
-    <li><a href="#3">When & <br>Where</a></li>
-    <li><a href="/cities">Contact</a></li>
-    <li><a href="/instructions">General Instructions</a></li>
-    <li><a href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a></li>
-   <li ng-show="mainCtrl.isAdmin()"><a href="/editcity">Manage City</a></li>
-   <li ng-show="mainCtrl.isAdmin()"><a href="/entries">Registrations</a></li>
-  </ul>
+<!--Main Body Content-->
+<div class="landing_page">
+<article class="container">
+  <h1>Spark<br> 2018</h1>
+  <p style="font-size:1.4em;"> Make your mark…. It’s the SPARK!</p>
+  <p style="font-size:1.4em;"> Battle of India’s brightest young minds!</p>
+  <br>
+  <!-- <p></p> -->
+  <p style="font-size:1.4em;">ELIGIBILITY<br /><br />Students of Class 8 to 12 <br/>
+  2 participants per team</p>
+  <!-- <a href="https://codepen.io/alexakasanjeev/pen/RPxGXY" target="_blank">Pair it With Horizontal Line Break</a> -->
+</article>
+</div>
+<div class="landing_page">
+  <article class="container">
+    <h1>ABOUT US</h1><br>
+    <div style="text-align:justify;font-size:1.2em;">Shaastra, IIT Madras proudly presents SPARK!<br /><br /> SPARK is Shaastra’s flagship event for school students, consisting of the Spark Junior Quiz conducted all over India and the prestigious national level Spark Junior Conference.<br /><br />
+  Spark Junior Quiz is a unique quizzing journey that covers over 20 cities across the country. Take on India’s brightest young minds to come on top!<br /><br />
+  <div style="font-size:1.5em;">Who?</div>
+  All students of class 8 to 12 are eligible to participate<br /><br />
+  <div style="font-size:1.5em;">Where?</div>
+  Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Maharashtra, Karnataka, Gujarat, Delhi and West Bengal
+</div>
+  </article>
+  <!-- <article class="container">
+    <h1>Spark<br> 2018</h1>
+    <p> Make your mark…. It’s the SPARK!</p>
+    <p> Battle of India’s brightest young minds!</p>
+    <br>
+    <p>ELIGIBILITY<br />Students of Class 8 to 12 <br/>
+    2 participants per team</p>
+  </article> -->
 </div>
 
-<div class="content">
-  <div class="para" id="1">
-    <div class="spark m">
-      <h2>Shaastra Presents</h2>
-      <h1>SPARK</h1>
-      <img src="../assets/images/bulb.svg">
-      <p>
-        SPARK is Shaastra's flagship event for school students which aims to give a technical flavour to school students. It is conducted every year across the country, in the cities of <b>(click on a city to register for that city)</b>
-        <a ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
-              &ensp;{{city}} ,
-        </a>.
-      </p>
-    </div>
+<style media="screen">
+* {
+margin: 0;
+padding: 0;
+}
 
-    <div class="shaastra m">
-      <h2>About</h2>
-      <h1>Shaastra</h1>
-      <p>It is the annual technical fest of IIT Madras, consisting of various engineering, science and technology competitions, summits, lectures, video conferences, exhibitions, demonstrations and workshops.</p>
-      <input type="checkbox" id="toggle">
-      <p id="hide"> Eighteen editions strong, it started in its current avatar in the year 2000. Shaastra attracts participation from all over India, and seeks to provide collegiate students with a platform to showcase their scientific and engineering talents. Shaastra is entirely student managed and holds the distinction of being the first such event in the world to be ISO 9001:2000 certified for implementing a Quality Management System.</p>
-      <label for="toggle" id="out">Read More...</label>
-    </div>
-  </div>
-  <div id="2" class="video m">
+body {
+position: relative;
+min-width: 100vw;
+min-height: 100vh;
+color: #fff;
+font-family: 'Montserrat';
+height:100vmax;
+margin-top: 0px;
+}
 
-      <iframe width="100%" height="450px" src="https://www.youtube.com/embed/RLXcMUZ8AAA?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div class="struct m">
-    <div class="lists " id="colu1">
-        <h2>Quiz</h2>
+.bars {
+/*   background-color:pink; */
+position: absolute;
+width: 27px;
+height: 27px;
+top: 30px;
+right: 30px;
+cursor: pointer;
+z-index: 101;
+padding-top:9px;
+}
 
-                <ul>
-                  <li>
-                    Teams Of 2
-                  </li>
-                  <li>
-                    40 Questions
-                  </li>
-                  <li>
-                    General Tech Quiz
-                  </li>
-                  <li>
-                    Top 2 teams will get prizes
-                  </li>
-                  <li>
-                    Top 5 teams from each city will qualify for screening
-                  </li>
-                </ul>
+.bar {
+width: 100%;
+height: 4px;
+background-color: #fff;
+position: absolute;
+}
 
-            </div>
-            <div class="lists " id="colu3">
-          <h2>Screening Round</h2>
-          <ul>
-            <li>
-              75 teams - Participation
-            </li>
-            <li>
-              Questionnarie - 1 Page report on given topic or case study competiiton
-            </li>
-            <li>
-              Screening top 20 teams from country
-            </li>
-            <li>
-              Problems Statement for SIC
-            </li>
-          </ul>
-              </div>
-            <div class="lists" id="colu2">
-              <h2> Spark Finals</h2>
-              <ul>
-                <li>
-                  Top 3 teams as national winners
-                </li>
-              </ul>
-            </div>
-            <img src="../assets/images/trophy.png">
-</div>
-  <div id="3" class="w m">
-    <div class="when">
-    <h2>When</h2>
-    <h1>AUGUST</h1>
-    </div>
-    <div class="where">
-      <h2>Where</h2>
-      <h1 id="s1">Telangana,</h1> <h1 id="s3"> Andhra,</h1> <h1 id="s2">  Karnataka,</h1>    <h1 id="s5"> Tamil Nadu,</h1> <h1 id="s4">   Kerala, </h1> <h1>Maharastra,</h1> <h1>Delhi NCR,</h1> <h1>West Bengal</h1>
-    </div>
-    <div class="contact">
-      <h2>Contact Us</h2>
-      <a href="/cities">View List</a>
-    </div>
-  </div>
+span::before,
+span::after {
+content: "";
+display: block;
+background-color: #fff;
+width: 100%;
+height: 4px;
+position: absolute;
+}
 
-  <!-- <div class="spons m">
-    <h2>Sponsors</h2>
-    <img src="../../assets/images/spons.png">
-  </div> -->
-</div>
+.bar::before {
+transform: translateY(-9px);
+}
+
+.bar::after {
+transform: translateY(9px);
+}
+
+.bars.active .bar {
+background-color: transparent;
+}
+
+.bars.active span::before {
+animation: top-bar 1s;
+animation-fill-mode: forwards;
+}
+
+.bars.active span::after {
+animation: bottom-bar 1s;
+animation-fill-mode: forwards;
+}
+
+
+/* Navbar Links CSS */
+
+#nav {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+transition: all 1s;
+z-index: -1;
+overflow: hidden;
+opacity: 0;
+}
+
+#nav a {
+color: #fff;
+text-decoration: none;
+line-height: 70vw;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+text-indent: 50vw;
+border-radius: 50%;
+transition: all .5s;
+}
+
+#nav a:hover {
+background: #357FFD;
+}
+
+ul {
+list-style: none;
+}
+
+.visible {
+z-index: 100 !important;
+opacity: 1 !important;
+}
+
+.shape-circle {
+border-radius: 50%;
+width: 20vw;
+height: 20vw;
+top: -10vw;
+right: -10vw;
+position: absolute;
+transition: all 1s ease-in-out;
+background: #2979FF;
+box-shadow: 0 0px 0px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:first-child {
+width: 200vw;
+height: 200vw;
+top: -100vw;
+right: -100vw;
+z-index: 5;
+transition: all .5s ease-in-out;
+box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:nth-child(2) {
+width: 150vw;
+height: 150vw;
+top: -75vw;
+right: -75vw;
+z-index: 6;
+transition: all .6s ease-in-out;
+box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:nth-child(3){
+width: 100vw;
+height: 100vw;
+top: -50vw;
+right: -50vw;
+z-index: 7;
+transition: all .7s ease-in-out;
+box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:last-child{
+width: 50vw;
+height: 50vw;
+top: -25vw;
+right: -25vw;
+z-index: 8;
+transition: all .8s ease-in-out;
+box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
+}
+
+nav.visible li:first-child a {
+line-height: 265vw !important;
+  text-indent: 15vw !important;
+
+}
+
+nav.visible li:nth-child(2) a {
+line-height: 200vw !important;
+text-indent:17vw !important;
+}
+
+nav.visible li:nth-child(3) a {
+line-height: 137vw !important;
+  text-indent: 17vw !important;
+
+}
+
+nav.visible li:last-child a {
+line-height: 70vw !important;
+text-indent:12vw !important;
+}
+
+
+/* Main Body CSS */
+
+.container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+.landing_page{
+  background: url('http://thecodeplayer.com/u/m/b1.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+font-size: 60px;
+text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+text-transform: uppercase;
+font-size: 120px;
+letter-spacing:5px;
+padding-top:40px;
+}
+
+article p {
+padding-bottom: 15px;
+text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+article a {
+color: #fff;
+text-decoration: none;
+opacity: .2;
+font-size: 12px;
+}
+
+article a:hover {
+opacity: .8;
+}
+
+@keyframes top-bar {
+50% {
+  transform: translateY(0);
+}
+100% {
+  transform: rotate(45deg) translateY(0);
+}
+}
+
+@keyframes bottom-bar {
+50% {
+  transform: translateY(0);
+}
+100% {
+  transform: rotate(-45deg) translateY(0);
+}
+}
+
+
+@media screen and (max-width:800px) {
+
+h1 {
+  padding-top:80px;
+  font-size: 60px;
+}
+}
+
+</style>
