@@ -4,18 +4,23 @@ export default class AdminController {
   users: Object[];
 
   /*@ngInject*/
-  constructor($http) {
+  constructor($http, $scope) {
     // Use the User $resource to fetch all users
     this.$http = $http;
-    this.curCity = '';
+    this.$scope = $scope;
+    $scope.curCity = '';
     this.registrations = false;
+    $scope.cities = ['Chennai','Madurai','Coimbatore','Trichy','Thanjavur','Salem','Erode','Trivandrum','Kochi','Thrissur','Kozhikode','Visakhapatnam','Vijayawada','Hyderabad','Hubli','Bengaluru','Delhi','Chandigarh','Mumbai','Pune','Kolkata','Bhubaneswar'];
   }
 
   $onInit(){
-    this.$http.get('/api/citys').then(res => {
-      this.cities = res.data;
+    }
+
+  changeCurCity = function(cityName) {
+    var app = this;
+    this.$http.get('/api/participants/cityParticipants/' + cityName).then(function(data) {
+      app.$scope.displayed = data.data;
     });
   }
-
 
 }

@@ -72,6 +72,13 @@ export function index(req, res) {
     .catch(handleError(res));
 }
 
+export function cityParticipants(req, res) {
+  console.log(req.params);
+  return Participant.find({city: req.params.cityName}).exec()
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
+
 // Gets a single Participant from the DB
 export function show(req, res) {
   return Participant.findById(req.params.id).exec()

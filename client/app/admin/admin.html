@@ -1,7 +1,39 @@
 <div class="container">
   <div>
-    <select ng-model="editCtrl.curCity" ng-options="city as city.CityName for city in editCtrl.cities" ng-change="editCtrl.changeCurCity()" style="width: 25%; margin-bottom: 20px;">
+    <label> Select City </label> <br>
+    <select ng-model="curCity" ng-options="city as city for city in cities" ng-change="admin.changeCurCity(curCity)" style="width: 25%; margin-bottom: 20px;">
     </select>
-    <div class="btn btn-primary">Get Registrations</div>
   </div>
 </div>
+<table ng-show="displayed.length > 0">
+  <tr style="font-weight: bold;">
+    <td> Participant 1 </td>
+    <td> Email </td>
+    <td> Class </td>
+    <td> Roll No. </td>
+    <td> Mobile </td>
+    <td> School </td>
+
+    <td> Participant 2 </td>
+    <td> Email </td>
+    <td> Class </td>
+    <td> Roll No. </td>
+    <td> Mobile </td>
+    <td> School </td>
+  </tr>
+  <tr ng-repeat="part in displayed">
+    <td> {{part.name1}} </td>
+    <td> {{part.email1}} </td>
+    <td> {{part.class1}} </td>
+    <td> {{part.rollnum1}} </td>
+    <td> {{part.mobile1}} </td>
+    <td> {{part.school1}} </td>
+
+    <td> {{part.name2}} </td>
+    <td> {{part.email2}} </td>
+    <td> {{part.class2}} </td>
+    <td> {{part.rollnum2}} </td>
+    <td> {{part.mobile2}} </td>
+    <td> {{part.school2}} </td>
+  </tr>
+</table>
