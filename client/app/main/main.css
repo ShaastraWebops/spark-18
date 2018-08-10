@@ -9,19 +9,45 @@ body{
   max-width:100%;
   overflow-x: hidden;
 }
+#navbar {
+  width: 200vh;
+  overflow: hidden;
+  background-color: #333;
+   
+}
 
-.sidebar{
-  width: 11.5vw;
-  max-width: 120px;
+/* Navbar links */
+#navbar a {
+  font-size: 3vh;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  margin-right: 6vh;
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  text-decoration: none;
+
+}
+.citybutton{
+
+margin-left: 10vh;
+text-align: center;
+
+}
+
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
   position: fixed;
-  border-right: 1px solid gainsboro;
-  margin-top: 25px;
-  
+  top: 0;
+  width: 100%;
 }
 
-.sidebar.ul.register{
-  padding: 0px;
-}
+
+
+
 
 .button1 {
     background-color: #000428; /* Green */
@@ -38,7 +64,7 @@ body{
 
 .content{
   /*padding: 30px 10px;*/
-  margin-left: 12vw;
+  
   width: 85vw;
   display: flex;
   flex-direction: column;

@@ -7,23 +7,12 @@ body {
     background-repeat: no-repeat;
     background-position: right top;
     margin-right: 200px;
-    background-attachment: fixed;
+    
 }
 </style>
 </head>
 <body>
-<div class="sidebar">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="/structure">Structure</a></li>
-    <li><a href="#3">Venue & <br>Schedule</a></li>
-    <li><a href="/cities">Contact Us</a></li>
-    <li><a href="/instructions">Terms</a></li>
-    <li><a href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a></li>
-   <li ng-show="mainCtrl.isAdmin()"><a href="/editcity">Manage City</a></li>
-   <li ng-show="mainCtrl.isAdmin()"><a href="/entries">Registrations</a></li>
-  </ul>
-</div>
+
 
 <div class="content">
   <div class="para" id="1">
@@ -31,8 +20,23 @@ body {
       <h2>Shaastra Presents</h2>
       <h1>SPARK!</h1>
       <p>
-       Shaastra, IIt Madras proudly presents SPARK!
-       
+       Shaastra, IIT Madras proudly presents SPARK!</p>
+<nav id="navbar">
+  <ul>
+    <a class="nav-brand" href="#">Home</a>
+    <a class="nav-brand" href="/structure">Structure</a>
+    <a class="nav-brand" href="#3">Venue & Schedule</a>
+    <a class="nav-brand" href="/cities">Contact Us</a>
+    <a class="nav-brand" href="/instructions">Terms</a>
+    <a class="nav-brand" href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a>
+   <li ng-show="mainCtrl.isAdmin()"><a class="nav-brand" href="/editcity">Manage City</a></li>
+   <li ng-show="mainCtrl.isAdmin()"><a class="nav-brand" href="/entries">Registrations</a></li>
+  </ul>
+</nav>
+
+
+
+       <p>
        SPARK is Shaastra's flagship event for school students,consisting of the Spark JUnior Quiz conducted all over India and the prestogious national level Spark Junior Conference.
         
        Spark Junior Quiz is a unique quizzing journey that coversover 20 cities across the country. Take on India's brightest young minds to come on top!</p>
@@ -46,9 +50,9 @@ body {
        <p>Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Maharashtra, Karnataka, Gujarat, Delhi and West Bengal.</p>
 
        <p> <b>To register, click on your city below:</b></p>
-        <a class="button1" ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
+       <div class = "citybutton"> <a class="button1" ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
               &ensp;{{city}} 
-        </a>.
+        </a></div>
       
     </div>
 <div id="2" class="video m">
@@ -74,4 +78,25 @@ body {
 <div class="mobreg">
   <a href="/registration" style="text-decoration: none; color: #ffffff;"> REGISTER NOW</a>
 </div>
+<script type="text/javascript">
+  // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>>
+
 </body>
