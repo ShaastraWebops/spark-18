@@ -1,3 +1,4 @@
+
 <div class="content">
   <div class="para" id="1">
     <div class="spark m"> 
@@ -44,96 +45,114 @@ Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Maharashtra, Karnataka, Gujarat, 
       </p>
     </div>
 
-    <div class="shaastra m">
-      <h2>About</h2>
-      <h1>Shaastra</h1>
-      <p>It is the annual technical fest of IIT Madras, consisting of various engineering, science and technology competitions, summits, lectures, video conferences, exhibitions, demonstrations and workshops.</p>
-      <input type="checkbox" id="toggle">
-      <p id="hide"> Eighteen editions strong, it started in its current avatar in the year 2000. Shaastra attracts participation from all over India, and seeks to provide collegiate students with a platform to showcase their scientific and engineering talents. Shaastra is entirely student managed and holds the distinction of being the first such event in the world to be ISO 9001:2000 certified for implementing a Quality Management System.</p>
-      <label for="toggle" id="out">Read More...</label>
-    </div>
-  </div>
-  <div id="2" class="video m">
+<!--Main Body Content-->
+<div class="landing_page">
+<article class="container">
+  <h1>Spark<br> 2018</h1>
+  <p style="font-size:1.4em;"> Make your mark…. It’s the SPARK!</p>
+  <p style="font-size:1.4em;"> Battle of India’s brightest young minds!</p>
+  <br>
+  <!-- <p></p> -->
+  <p style="font-size:1.4em;">ELIGIBILITY<br /><br />Students of Class 8 to 12 <br/>
+  2 participants per team</p>
 
-      <iframe width="100%" height="450px" src="https://www.youtube.com/embed/RLXcMUZ8AAA?rel=0" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div class="struct m">
-    <div class="lists " id="colu1">
-        <h2>Quiz</h2>
-
-                <ul>
-                  <li>
-                    Teams Of 2
-                  </li>
-                  <li>
-                    50 Questions
-                  </li>
-                  <li>
-                    General Tech Quiz
-                  </li>
-                  <li>
-                    Top 2 teams will get prizes
-                  </li>
-                  <li>
-                    Top 5 teams from each city will qualify for screening
-                  </li>
-                </ul>
-
-            </div>
-            <div class="lists " id="colu3">
-          <h2>Screening Round</h2>
-          <ul>
-            <li>
-              75 teams - Participation
-            </li>
-            <li>
-              Questionnarie - 1 Page report on given topic or case study competiiton
-            </li>
-            <li>
-              Screening top 20 teams from country
-            </li>
-            <li>
-              Problems Statement for SIC
-            </li>
-          </ul>
-              </div>
-            <div class="lists" id="colu2">
-              <h2> Junior Conference</h2>
-              <ul>
-                <li>
-                  Day 1 - Key note Lecture + Research Lab Visit + Final Presentation
-                </li>
-                <li>
-                  Day 2 - Visit to Top research facility
-                </li>
-                <li>
-                  Top 3 teams as national winners
-                </li>
-              </ul>
-            </div>
-            <img src="../assets/images/trophy.png">
+</article>
 </div>
-  <div id="3" class="w m">
-    <div class="when">
-    <h2>When</h2>
-    <h1>AUGUST</h1>
-    </div>
-    <div class="where">
-      <h2>Where</h2>
-      <h1 id="s1">Telangana,</h1> <h1 id="s3"> Andhra,</h1> <h1 id="s2">  Karnataka,</h1>    <h1 id="s5"> Tamil Nadu,</h1> <h1 id="s4">   Kerala, </h1> <h1>Maharastra,</h1> <h1>Delhi NCR,</h1> <h1>West Bengal</h1>
-    </div>
-    <div class="contact">
-      <h2>Contact Us</h2>
-      <a href="/cities">View List</a>
-    </div>
+<div class="landing_page">
+  <article class="container">
+    <h1>ABOUT US</h1><br>
+    <div style="text-align:justify;font-size:1.2em;">Shaastra, IIT Madras proudly presents SPARK!<br /><br /> SPARK is Shaastra’s flagship event for school students, consisting of the Spark Junior Quiz conducted all over India and the prestigious national level Spark Junior Conference.<br /><br />
+  Spark Junior Quiz is a unique quizzing journey that covers over 20 cities across the country. Take on India’s brightest young minds to come on top!<br /><br />
+  <div style="font-size:1.5em;">Who?</div>
+  All students of class 8 to 12 are eligible to participate<br /><br />
+  <div style="font-size:1.5em;">Where?</div>
+  Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Maharashtra, Karnataka, Gujarat, Delhi and West Bengal
   </div>
-
-  <div class="spons m">
-    <h2>Sponsors</h2>
-    <img src="../../assets/images/spons.png">
+  <br><br>
+  <div style="font-size:1.6em;">
+    To register, click on your city below:
   </div>
+  <div>
+    <button class="cardbutton button4" ng-repeat="city in mainCtrl.cities"><a href='/registration/{{city}}'>{{city}}</a></button>
+  </div>
+</article>
 </div>
 
-<div class="mobreg">
-  <a href="/registration" style="text-decoration: none; color: #ffffff;"> REGISTER NOW</a>
-</div>
+<style media="screen">
+* {
+margin: 0;
+padding: 0;
+}
+
+
+body {
+position: relative;
+min-width: 100vw;
+min-height: 100vh;
+color: #fff;
+font-family: 'Montserrat';
+height:100vmax;
+margin-top: 0px;
+}
+
+.cardbutton {
+    /*background-color: #4CAF50; /* Green */*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 10px 2px;
+    cursor: default;
+}
+.button4 {
+    background-color: transparent;
+    color: red;
+    border: 2px solid #e7e7e7;
+}
+
+
+
+/* Main Body CSS */
+
+.container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+.landing_page{
+  background: url('http://thecodeplayer.com/u/m/b1.png') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 0;
+  top: 0;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+font-size: 60px;
+text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+text-transform: uppercase;
+font-size: 120px;
+letter-spacing:5px;
+padding-top:40px;
+}
+
+article p {
+padding-bottom: 15px;
+text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@media screen and (max-width:800px) {
+
+h1 {
+  padding-top:80px;
+  font-size: 60px;
+}
+}
+
+</style>

@@ -13,10 +13,15 @@ export class MainController {
     this.newThing = '';
   }
 
+  regfun(){
+    console.log("Hey");
+       // window.location = a;
+  }
+
   entries(){
     window.location='/entries';
   }
-  
+
   register(){
     window.location='/registration';
   }
