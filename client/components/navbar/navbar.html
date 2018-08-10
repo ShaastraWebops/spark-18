@@ -1,4 +1,4 @@
-<div style="z-index:100001;position:fixed;height:100vh;width:100vw;">
+<div>
 <!--HamBurger Icon-->
 <div class="bars" id="nav-action" style="position:fixed;">
   <span class="bar"> </span>
@@ -6,12 +6,12 @@
 
 <!--Navbar Links-->
 <nav id="nav">
-  <ul>
-    <li class="shape-circle circle-one"><a href="/cities">Contact</a></li>
-    <li class="shape-circle circle-two"><a href="#">Terms</a></li>
-    <li class="shape-circle circle-three"><a href="#">Schedule</a></li>
-    <li class="shape-circle circle-five">
-      <a href="#">Home</a>
+  <ul style="list-style: none;">
+    <li id="n1" class="shape-circle circle-one"><a href="/cities">Contact</a></li>
+    <li id="n2" class="shape-circle circle-two"><a href="/instructions#">Info</a></li>
+    <li id="n3" class="shape-circle circle-three"><a href="/cities">Schedule</a></li>
+    <li id="n4" class="shape-circle circle-five">
+      <a href="/">Home</a>
     </li>
   </ul>
 </nav>
@@ -21,10 +21,21 @@
 // Setting up the Variables
 var bars = document.getElementById("nav-action");
 var nav = document.getElementById("nav");
+var n1 = document.getElementById("n1");
+var n2 = document.getElementById("n2");
+var n3 = document.getElementById("n3");
+var n4 = document.getElementById("n4");
 
-
+//window.scrollTo(500, 0);function(){
 //setting up the listener
 bars.addEventListener("click", barClicked, false);
+n1.addEventListener("click", barClicked, false);
+n2.addEventListener("click", barClicked, false);
+n3.addEventListener("click", barClicked, false);
+n4.addEventListener("click", barClicked, false);
+bars.addEventListener("click", function(){
+  window.scrollTo(0, 0);
+});
 
 
 //setting up the clicked Effect
@@ -122,10 +133,6 @@ transition: all .5s;
 
 #nav a:hover {
 background: #357FFD;
-}
-
-ul {
-list-style: none;
 }
 
 .visible {
@@ -227,36 +234,3 @@ text-indent:12vw !important;
 }
 
 </style>
-
-<!-- <div class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="$ctrl.isCollapsed = !$ctrl.isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a href="/" class="navbar-brand">summitregistations2018</a>
-    </div>
-    <div uib-collapse="$ctrl.isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li ng-repeat="item in $ctrl.menu" ui-sref-active="active">
-            <a ui-sref="{{item.state}}">{{item.title}}</a>
-        </li>
-        <li ng-show="$ctrl.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
-        <li ng-class="{active: isActive('/registration')}"><a href="/registration">Registration Form</a></li>
-
-        </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
-        <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
-        <li ng-show="$ctrl.isLoggedIn()"><p class="navbar-text">Hello {{ $ctrl.getCurrentUser().name }}</p> </li>
-        <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-        <li ng-show="$ctrl.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
- -->

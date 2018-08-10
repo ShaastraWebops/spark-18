@@ -1,3 +1,9 @@
-<div class="container" style="margin-top: 100px;">
-  <p>You don't have to sign up to register. <a ui-sref="registration" ui-sref-active="active">Click here</a> to register for the Summit.</p>
+<div class="container" style="margin-top: 100px;" >
+  <!-- <p>You don't have to sign up to register. <a ui-sref="registration" ui-sref-active="active">Click here</a> to register for the Summit.</p> -->
+  <form ng-submit="vm.register(form)">
+    Name <input type="text" name="name" ng-model="vm.user.name"><br>
+    Email<input type="email" name="email" ng-model="vm.user.email" placeholder="Enter mail"><br>
+    Pwd<input type="password" name="password" ng-model="vm.user.password" placeholder="Enter pwd">
+    <button type="submit" name="button">Signup</button>
+  </form>
 </div>

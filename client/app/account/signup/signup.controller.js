@@ -28,18 +28,22 @@ export default class SignupController {
 
   register(form) {
     this.submitted = true;
-
-    if(form.$valid) {
+    console.log("1");
+    if(true) {
+      console.log("2");
       return this.Auth.createUser({
         name: this.user.name,
         email: this.user.email,
         password: this.user.password
       })
         .then(() => {
+          console.log("3");
           // Account created, redirect to home
           this.$state.go('main');
         })
         .catch(err => {
+          console.log("4");
+          console.log(err);
           err = err.data;
           this.errors = {};
           // Update validity of form fields that match the mongoose errors
