@@ -6,7 +6,7 @@ import * as auth from '../../auth/auth.service';
 
 var router = express.Router();
 
-router.get('/export', auth.hasRole('admin'), controller.exp);
+router.get('/export/:cityName', auth.hasRole('admin'), controller.exp);
 router.get('/cityParticipants/:cityName', controller.cityParticipants);
 router.get('/', controller.index);
 router.get('/:id', controller.show);

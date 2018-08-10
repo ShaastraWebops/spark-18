@@ -3,6 +3,7 @@
     <label> Select City </label> <br>
     <select ng-model="curCity" ng-options="city as city for city in cities" ng-change="admin.changeCurCity(curCity)" style="width: 25%; margin-bottom: 20px;">
     </select>
+    <button class="btn btn-success" ng-click="admin.exp(curCity)"> Export as CSV </button>
   </div>
 </div>
 <table ng-show="displayed.length > 0">
