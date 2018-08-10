@@ -1,3 +1,50 @@
+
+<div class="content">
+  <div class="para" id="1">
+    <div class="spark m"> 
+
+      <h2>Shaastra Presents</h2>
+      <h1 style="text-align:center; ">SPARK</h1>
+      <h2 style="text-align:right; "> Battle of India's brightest young minds!</h2>
+  </div>
+   </div>
+    </div>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <ul class="navbar-nav">
+    <li class="navbar-brand" ><a style="color: white;" href="#">Spark</a></li>
+    <li class="navbar-brand" ><a  style="color: white;"href="#2">Structure</a></li>
+     <li class="navbar-brand" ><a style="color: white;" href="#3">When & <br>Where</a></li>
+    <li class="navbar-brand" ><a  style="color: white;" href="/cities">Contact</a></li>
+    <li class="navbar-brand" ><a style="color: white;" href="/instructions">General Instructions</a></li>
+    <li class="navbar-brand" ><a style="color: white;" href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a></li>
+   <li class="navbar-brand"  ng-show="mainCtrl.isAdmin()"><a style="color: white;" href="/editcity">Manage City</a></li>
+   <li class="navbar-brand"  ng-show="mainCtrl.isAdmin()"><a style="color: white;" href="/entries">Registrations</a></li>
+  </ul>
+</nav>
+<div class="content">
+  <div class="para" id="1">
+    <div class="spark m"> 
+      <h2>Make your mark it's the SPARK!</h2>
+      <p>
+        Shaastra, IIT Madras proudly presents SPARK! 
+SPARK is Shaastra’s flagship event for school students, consisting of the Spark Junior Quiz conducted all over India and the prestigious national level Spark Junior Conference. 
+Spark Junior Quiz is a unique quizzing journey that covers over 20 cities across the country. Take on India’s brightest young minds to come on top!
+</p><p><b>Who?</b></p><p>
+All students of class 8 to 12 are eligible to participate! </p><p>
+<b>Where?</b></p><p>
+Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Maharashtra, Karnataka, Gujarat, Delhi and West Bengal
+
+      </p>
+      <p>
+         <b>(click on a city to register for that city)</b>
+        <a ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
+              &ensp;{{city}} ,
+        </a>.
+      </p>
+    </div>
+
 <!--Main Body Content-->
 <div class="landing_page">
 <article class="container">
@@ -36,6 +83,7 @@
 margin: 0;
 padding: 0;
 }
+
 
 body {
 position: relative;
