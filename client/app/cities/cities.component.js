@@ -95,7 +95,7 @@ export class CitiesComponent {
             "sno": "9",
             "name": "Rushikesh Katkar",
             "cityName": "Hubli-Dharwad",
-            "date": "11/08/18",
+            "date": "19/08/18",
             "address": "Lions English Medium school ,vijay nagar, koli, hubballi, karnataka 580032",
             "no": "7028308757",
             "coord": "yes",
