@@ -1,11 +1,24 @@
-
+<html>
+<head>
+<style>
+body {
+  
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRceib9qhYYf0UdAg6IXVWapqATmRof74PvjWPvy7i-FMuB_jYkUQ");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: fixed;
+}
+</style>
+</head>
+<body>
 <div class="sidebar">
   <ul>
-    <li><a href="#">Spark</a></li>
-    <li><a href="#2">Structure</a></li>
-    <li><a href="#3">When & <br>Where</a></li>
-    <li><a href="/cities">Contact</a></li>
-    <li><a href="/instructions">General Instructions</a></li>
+    <li><a href="#">Home</a></li>
+    <li><a href="/structure">Structure</a></li>
+    <li><a href="#3">Venue & <br>Schedule</a></li>
+    <li><a href="/cities">Contact Us</a></li>
+    <li><a href="/instructions">Terms</a></li>
     <li><a href="http://shaastra.org/images/Spark Brochure.pdf">Brochure</a></li>
    <li ng-show="mainCtrl.isAdmin()"><a href="/editcity">Manage City</a></li>
    <li ng-show="mainCtrl.isAdmin()"><a href="/entries">Registrations</a></li>
@@ -16,100 +29,42 @@
   <div class="para" id="1">
     <div class="spark m">
       <h2>Shaastra Presents</h2>
-      <h1>SPARK</h1>
-      <img src="../assets/images/bulb.svg">
+      <h1>SPARK!</h1>
       <p>
-        SPARK is Shaastra's flagship event for school students which aims to give a technical flavour to school students. It is conducted every year across the country, in the cities of <b>(click on a city to register for that city)</b>
-        <a ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
-              &ensp;{{city}} ,
-        </a>.
-      </p>
-    </div>
+       Shaastra, IIt Madras proudly presents SPARK!
+       
+       SPARK is Shaastra's flagship event for school students,consisting of the Spark JUnior Quiz conducted all over India and the prestogious national level Spark Junior Conference.
+        
+       Spark Junior Quiz is a unique quizzing journey that coversover 20 cities across the country. Take on India's brightest young minds to come on top!</p>
 
-    <div class="shaastra m">
-      <h2>About</h2>
-      <h1>Shaastra</h1>
-      <p>It is the annual technical fest of IIT Madras, consisting of various engineering, science and technology competitions, summits, lectures, video conferences, exhibitions, demonstrations and workshops.</p>
-      <input type="checkbox" id="toggle">
-      <p id="hide"> Eighteen editions strong, it started in its current avatar in the year 2000. Shaastra attracts participation from all over India, and seeks to provide collegiate students with a platform to showcase their scientific and engineering talents. Shaastra is entirely student managed and holds the distinction of being the first such event in the world to be ISO 9001:2000 certified for implementing a Quality Management System.</p>
-      <label for="toggle" id="out">Read More...</label>
+      <p> <b>Who?</b></p>
+
+       <p>All students of class 8 to 12 are eligible to participate.</p>
+
+       <p><b>Where?</b></p>
+
+       <p>Tamil Nadu, Kerala, Andhra Pradesh, Telangana, Maharashtra, Karnataka, Gujarat, Delhi and West Bengal.</p>
+
+       <p> <b>To register, click on your city below:</b></p>
+        <a class="button1" ng-repeat="city in mainCtrl.cities" href='/registration/{{city}}'>
+              &ensp;{{city}} 
+        </a>.
+      
     </div>
-  </div>
-  <div id="2" class="video m">
+<div id="2" class="video m">
 
       <iframe width="100%" height="450px" src="https://www.youtube.com/embed/RLXcMUZ8AAA?rel=0" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="struct m">
-    <div class="lists " id="colu1">
-        <h2>Quiz</h2>
-
-                <ul>
-                  <li>
-                    Teams Of 2
-                  </li>
-                  <li>
-                    50 Questions
-                  </li>
-                  <li>
-                    General Tech Quiz
-                  </li>
-                  <li>
-                    Top 2 teams will get prizes
-                  </li>
-                  <li>
-                    Top 5 teams from each city will qualify for screening
-                  </li>
-                </ul>
-
-            </div>
-            <div class="lists " id="colu3">
-          <h2>Screening Round</h2>
-          <ul>
-            <li>
-              75 teams - Participation
-            </li>
-            <li>
-              Questionnarie - 1 Page report on given topic or case study competiiton
-            </li>
-            <li>
-              Screening top 20 teams from country
-            </li>
-            <li>
-              Problems Statement for SIC
-            </li>
-          </ul>
-              </div>
-            <div class="lists" id="colu2">
-              <h2> Junior Conference</h2>
-              <ul>
-                <li>
-                  Day 1 - Key note Lecture + Research Lab Visit + Final Presentation
-                </li>
-                <li>
-                  Day 2 - Visit to Top research facility
-                </li>
-                <li>
-                  Top 3 teams as national winners
-                </li>
-              </ul>
-            </div>
-            <img src="../assets/images/trophy.png">
-</div>
-  <div id="3" class="w m">
-    <div class="when">
-    <h2>When</h2>
-    <h1>AUGUST</h1>
-    </div>
-    <div class="where">
-      <h2>Where</h2>
-      <h1 id="s1">Telangana,</h1> <h1 id="s3"> Andhra,</h1> <h1 id="s2">  Karnataka,</h1>    <h1 id="s5"> Tamil Nadu,</h1> <h1 id="s4">   Kerala, </h1> <h1>Maharastra,</h1> <h1>Delhi NCR,</h1> <h1>West Bengal</h1>
-    </div>
-    <div class="contact">
-      <h2>Contact Us</h2>
-      <a href="/cities">View List</a>
+    <div class="shaastra m">
+      <h1>About Shaastra</h1>
+      <p>Shaastra is the annual technical fest of <b>IIT Madras</b>. Ever since its inception in the year 2000, Shaastra has been an integral part of the technical experienceai IIT Madras. It has been growing in size, substance and statureand has become a trendsetter among college technical festivals across the country. Shaastra has the distinction of being the <b>first student managed technical festival</b> in the nation to be <b>ISO 9001:2015</b> certified. Every edition of Shaastra features a wide variety of events encompassing the entire spectrum of innovation. To ensure a steep learning curve, numerous workshops, lectures and video conferences dealing with diverse spheres of science, technlogy and finance are also organised.</p>
+      <input type="checkbox" id="toggle">
+      <p id="hide"><b>Shaastra</b> believes strongly in knowledge sharing and encouraging technical spirit among the students of the country. <b>Spark </b>is an innovative initiative which adheres to <b>Shaastra's</b> non profit roots as we provide a national platform for students to compete and improve themselves at zero registration fee. With <b>Spark, Shaastra</b> aims to ignite the 'Spark' of Innovation & Technology in the tech-savy scientific young student minds of the country.  </p>
+      <label for="toggle" id="out">Read More...</label>
     </div>
   </div>
-
+  
+  
   <div class="spons m">
     <h2>Sponsors</h2>
     <img src="../../assets/images/spons.png">
@@ -119,3 +74,4 @@
 <div class="mobreg">
   <a href="/registration" style="text-decoration: none; color: #ffffff;"> REGISTER NOW</a>
 </div>
+</body>

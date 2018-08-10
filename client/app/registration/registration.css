@@ -112,11 +112,33 @@ label{
 /*headings*/
 
 .fs-title {
-  font-size: 15px;
+  font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   color: #2C3E50;
   margin-bottom: 10px;
+}
+
+.border{
+    position: relative;
+    right: 50px;
+    left: 60px;
+    width: 1300px;
+    padding-left: 25px;
+    border: 5px solid gray;
+    margin: auto;
+
+}
+
+.border1{
+    position: relative;
+    right: 10px;
+    left: 60px;
+    width: 1300px;
+    padding-left: 25px;
+    border: 5px solid gray;
+    margin: auto;
+
 }
 
 .fs-subtitle {
