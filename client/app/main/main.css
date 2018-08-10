@@ -13,7 +13,7 @@ body{
   width: 200vh;
   overflow: hidden;
   background-color: #333;
-   
+   margin-left: -100px;
 }
 
 /* Navbar links */
@@ -64,7 +64,7 @@ text-align: center;
 
 .content{
   /*padding: 30px 10px;*/
-  
+  margin-left: 110px;
   width: 85vw;
   display: flex;
   flex-direction: column;

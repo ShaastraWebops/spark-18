@@ -1,6 +1,20 @@
 <html>
 <head>
 <style>
+column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+row{
+  :after {
+    content: "";
+    clear: both;
+    display: table;
+}
+}
+
 body {
   
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRceib9qhYYf0UdAg6IXVWapqATmRof74PvjWPvy7i-FMuB_jYkUQ");
@@ -69,11 +83,11 @@ body {
   </div>
   
   
-  <div class="spons m">
     <h2>Sponsors</h2>
-    <img src="../../assets/images/spons.png">
+    <div class="row">
+      <div class="column"><img style="width: 500px; height: 300px; " src="../../assets/images/spons.png"></div> 
+      <div class="column"><img  style="float: right !important; margin-top: -250px; width: 700px; height: 300px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxdonobZZ2MBSP3v6GWliXZ_WQn0WG0hHMAtprFSSBwnRVNRW6Q"></div>
   </div>
-</div>
 
 <div class="mobreg">
   <a href="/registration" style="text-decoration: none; color: #ffffff;"> REGISTER NOW</a>
