@@ -112,7 +112,7 @@ export function create(req, res) {
 export function exp(req, res) {
   return Participant.find({city: req.params.cityName}).exec()
     .then(participants => {
-      var fields = ['name1', 'class1', 'school1','rollnum1','email1','mobile1', 'name1', 'class1', 'school1','rollnum1','email1','mobile1'];
+      var fields = ['name1', 'class1', 'school1','rollnum1','email1','mobile1', 'name2', 'class2', 'school2','rollnum2','email2','mobile2'];
       var csv = json2csv({ data: participants, fields: fields});
       res.setHeader('Content-disposition', 'attachment; filename=participants.csv');
       res.set('Content-Type', 'text/csv');
