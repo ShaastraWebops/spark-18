@@ -9,7 +9,7 @@ export class MainController {
     this.$http = $http;
     this.isAdmin = Auth.isAdminSync;
     this.awesomeThings = [];
-    this.cities = ['Chennai','Madurai','Coimbatore','Trichy','Thanjavur','Salem','Erode','Trivandrum','Kochi','Thrissur','Kozhikode','Visakhapatnam','Vijayawada','Hyderabad','Hubli','Bengaluru','Delhi','Chandigarh','Mumbai','Pune','Kolkata','Bhubaneswar'];
+    this.cities = ['Chennai','Madurai','Coimbatore','Trichy','Thanjavur','Salem','Trivandrum','Kochi','Thrissur','Kozhikode','Visakhapatnam','Vijayawada','Hyderabad','Hubli','Bengaluru','Delhi','Chandigarh','Mumbai','Pune','Kolkata','Bhubaneswar'];
     this.newThing = '';
   }
 
