@@ -104,7 +104,7 @@ export class CitiesComponent {
         {
             "sno": "10",
             "name": "Simran Raj",
-            "cityName": "Bangalore",
+            "cityName": "TBA",
             "date":"TBA",
             "address": "TBA",
             "no": "9840880260 / 7992374298",
@@ -123,7 +123,7 @@ export class CitiesComponent {
         {
             "sno": "12",
             "name": "Mahir Muhammed Ali",
-            "cityName": "Kozhlikode",
+            "cityName": "TBA",
             "date": "18/08/18",
             "address": "Bharatiya Vidya Bhavan School&#10;Bhavans Hill,&#10;Ponnayankode kunnu&#10;Chevayur, Calicut – 673 017",
             "no": "8078339823",
@@ -132,7 +132,7 @@ export class CitiesComponent {
         {
             "sno": "13",
             "name": "M S Nikhil Sen",
-            "cityName": "Kochi",
+            "cityName": "TBA",
             "date": "18/08/18",
             "address": "Bhavan's Varuna Vidyalaya, Kakknad ,Kochi",
             "no": "8921186528 / 8547428378",
@@ -142,7 +142,7 @@ export class CitiesComponent {
         {
             "sno": "14",
             "name": "Thrilok Aashish A",
-            "cityName": "Thrissur",
+            "cityName": "TBA",
             "date":"TBA",
             "address": "TBA",
             "no": "9487818899",
@@ -170,7 +170,7 @@ export class CitiesComponent {
         {
             "sno": "17",
             "name": "Apurva Kale",
-            "cityName": "Mumbai",
+            "cityName": "TBA",
             "date":"TBA",
             "address": "TBA",
             "no": "9834885225",
@@ -179,7 +179,7 @@ export class CitiesComponent {
         {
             "sno": "18",
             "name": "Apurva Kale",
-            "cityName": "Pune",
+            "cityName": "TBA",
             "date":"TBA",
             "address": "TBA",
             "no": "9834885225",
@@ -198,7 +198,7 @@ export class CitiesComponent {
         {
             "sno": "20",
             "name": "Ishan Buxy",
-            "cityName": "Bhubaneswar",
+            "cityName": "TBA",
             "date": "26/08/18",
             "address": "DAV Public School, Chandrasekharpur Road, Sailashree Vihar, Chandrasekharpur, Phase-VII, Sailashree Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021",
             "no": "8450910745",
