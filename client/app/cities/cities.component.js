@@ -104,7 +104,7 @@ export class CitiesComponent {
         {
             "sno": "10",
             "name": "Simran Raj",
-            "cityName": "TBA",
+            "cityName": "Bangalore",
             "date":"TBA",
             "address": "TBA",
             "no": "9840880260 / 7992374298",
@@ -123,18 +123,18 @@ export class CitiesComponent {
         {
             "sno": "12",
             "name": "Mahir Muhammed Ali",
-            "cityName": "TBA",
+            "cityName": "Kozhikode",
             "date": "TBA",
-            "address": "Bharatiya Vidya Bhavan School&#10;Bhavans Hill,&#10;Ponnayankode kunnu&#10;Chevayur, Calicut – 673 017",
+            "address": "TBA",
             "no": "8078339823",
             "email": "mahirmuhammedali@gmail.com"
         },
         {
             "sno": "13",
             "name": "M S Nikhil Sen",
-            "cityName": "TBA",
+            "cityName": "Kochi",
             "date": "TBA",
-            "address": "Bhavan's Varuna Vidyalaya, Kakknad ,Kochi",
+            "address": "TBA",
             "no": "8921186528 / 8547428378",
             "coord": "Yes",
             "email": "nikhilsenbabu@gmail.com"
@@ -142,7 +142,7 @@ export class CitiesComponent {
         {
             "sno": "14",
             "name": "Thrilok Aashish A",
-            "cityName": "TBA",
+            "cityName": "Thrissur",
             "date":"TBA",
             "address": "TBA",
             "no": "9487818899",
@@ -170,7 +170,7 @@ export class CitiesComponent {
         {
             "sno": "17",
             "name": "Apurva Kale",
-            "cityName": "TBA",
+            "cityName": "Mumbai",
             "date":"TBA",
             "address": "TBA",
             "no": "9834885225",
@@ -179,7 +179,7 @@ export class CitiesComponent {
         {
             "sno": "18",
             "name": "Apurva Kale",
-            "cityName": "TBA",
+            "cityName": "Pune",
             "date":"TBA",
             "address": "TBA",
             "no": "9834885225",
@@ -198,9 +198,9 @@ export class CitiesComponent {
         {
             "sno": "20",
             "name": "Ishan Buxy",
-            "cityName": "TBA",
+            "cityName": "Bhubaneswar",
             "date": "TBA",
-            "address": "DAV Public School, Chandrasekharpur Road, Sailashree Vihar, Chandrasekharpur, Phase-VII, Sailashree Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021",
+            "address": "TBA",
             "no": "8450910745",
             "coord": "Yes",
             "email": "ishan.buxy@gmail.com"
