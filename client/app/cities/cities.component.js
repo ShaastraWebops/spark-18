@@ -123,9 +123,9 @@ export class CitiesComponent {
         {
             "sno": "12",
             "name": "Mahir Muhammed Ali",
-            "cityName": "Kozhlikode",
-            "date": "18/08/18",
-            "address": "Bharatiya Vidya Bhavan School&#10;Bhavans Hill,&#10;Ponnayankode kunnu&#10;Chevayur, Calicut – 673 017",
+            "cityName": "Kozhikode",
+            "date": "TBA",
+            "address": "TBA",
             "no": "8078339823",
             "email": "mahirmuhammedali@gmail.com"
         },
@@ -133,8 +133,8 @@ export class CitiesComponent {
             "sno": "13",
             "name": "M S Nikhil Sen",
             "cityName": "Kochi",
-            "date": "18/08/18",
-            "address": "Bhavan's Varuna Vidyalaya, Kakknad ,Kochi",
+            "date": "TBA",
+            "address": "TBA",
             "no": "8921186528 / 8547428378",
             "coord": "Yes",
             "email": "nikhilsenbabu@gmail.com"
@@ -199,8 +199,8 @@ export class CitiesComponent {
             "sno": "20",
             "name": "Ishan Buxy",
             "cityName": "Bhubaneswar",
-            "date": "26/08/18",
-            "address": "DAV Public School, Chandrasekharpur Road, Sailashree Vihar, Chandrasekharpur, Phase-VII, Sailashree Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751021",
+            "date": "TBA",
+            "address": "TBA",
             "no": "8450910745",
             "coord": "Yes",
             "email": "ishan.buxy@gmail.com"
