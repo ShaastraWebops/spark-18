@@ -153,7 +153,7 @@ export class CitiesComponent {
             "name": "Prajeet Oza",
             "cityName": "Delhi",
             "date": "25-8-18",
-            "address": "H-17, Mayapuri Road Mayapuri, Delhi – 110064",
+            "address": "New Era Public School, H17, Mayapuri Road, Mayapuri, Delhi - 110064",
             "no": "8767888916 / 9840899416",
             "coord": "yes",
             "email": "oza.prajeet@gmail.com"
